@@ -20,16 +20,15 @@
   }
 
   .container .product-info {
-    width: 102%;
-    margin: 25px -5px 25px -15px;
+    margin: 25px -5px 25px -10px;
   }
 
-  /* .container .product-info .brand {
+  .container .product-info .brand {
     font-family: 'Fraunces', sans-serif;
-    margin: 0px 35px 25px 35px;
     letter-spacing: 0px;
     font-size: 32px;
-    line-height: 32px;
+    line-height: 30px;
+    margin: 15px -30px 0px 35px;
   }
   
   .container .product-info .type {
@@ -38,7 +37,7 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: lighter;
-    margin: 0px 0px 25px 33px;
+    margin: 0px -30px 0px 35px;
     font-size: 12px;
   }
   
@@ -46,7 +45,7 @@
     color: var(--grayishblue);
     font-family: 'Montserrat', sans-serif;
     display: inline-block;
-    margin: 0px 20px 15px 35px;
+    margin: 15px -30px 0px 35px;
     line-height: 23px;
   }
   
@@ -54,22 +53,29 @@
     display: flex;
     text-align: center;
     align-items: center;
-    margin: 10px 0px 25px 35px;
+    margin: 25px -30px 0px 35px;
   }
   
   .product-purchase .newprice {
     color: var(--darkcyan);
     font-family: 'Fraunces', sans-serif;
     font-size: 32px;
-    margin: 0px 0px 0px 0px;
+    margin: -5px 0px 15px 0px;
   }
   
   .product-purchase .realprice {
     text-decoration: line-through;
     font-family: 'Montserrat', sans-serif;
     color: var(--grayishblue);
-    margin: 0px 0px 0px 20px;
+    margin: -20px 0px 0px 20px;
     font-size: 13px;
   }
-   */
+
+  .button {
+    margin: 20px 0px 0px 0px;
+    width: 295px;
+    height: 50px;
+    margin: 0px -30px 0px 35px;
+  }
+  
 }

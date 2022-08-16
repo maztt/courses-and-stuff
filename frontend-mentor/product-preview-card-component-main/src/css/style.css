@@ -12,13 +12,14 @@
 
 * {
   margin: 0px;
-  padding: 00px;
+  padding: 0px;
   font-size: 14px;
 }
 
 :root {
   --cream: hsl(30, 38%, 92%);
   --darkcyan: hsl(158, 36%, 37%);
+  --darkestcyan: hsl(158, 36%, 20%);
   --darkblue: hsl(212, 21%, 14%);
   --white: hsl(0, 0%, 100%);
   --grayishblue: hsl(228, 12%, 48%);
@@ -120,13 +121,9 @@ body {
   border: 0px;
   margin: 0px 0px 35px 35px;
   gap: 10px;
+  cursor: pointer;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.button:hover {
+  background-color: var(--darkestcyan);
 }
