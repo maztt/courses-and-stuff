@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightgrey: hsl(217, 12%, 63%);
+  --mediumgrey: hsl(216, 12%, 54%);
+  --darkblue: hsl(213, 19%, 18%);
+  --verydarkblue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--verydarkblue);
+}
+
+.container-firstpage {
+  width: 415px;
+  height: 415px;
+  background-image: linear-gradient(to top, #171e28, #1c2430, #242e3d);
+  margin: auto;
+  margin-top: 190px;
+  border-radius: 35px;
+  padding: 30px;
+}
+
+.title {
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.description-firstpage {
+  color: var(--mediumgrey);
+  margin-bottom: 30px;
+  line-height: 25px;
+}
+
+h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+li {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: #262f38;
+  color: var(--mediumgrey);
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.button {
+  width: 350px;
+  height: 45px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-color: var(--orange);
+  color: white;
+  border-style: none;
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.rating:hover {
+  background-color: var(--lightgrey);
+  cursor: pointer;
+  color: white;
+}
+
+.rating.clicked {
+  background-color: var(--orange);
+  color: white;
+}
+
+.container-secondpage {
+  width: 415px;
+  height: 415px;
+  background-image: linear-gradient(to top, #171e28, #1c2430, #242e3d);
+  margin: auto;
+  margin-top: 190px;
+  border-radius: 35px;
+  padding: 30px;
+}
+
+.rating-return {
+  display: flex;
+  width: 200px;
+  height: 30px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #262f38;
+  color: var(--orange);
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+.rating-image {
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-secondpage {
+  color: var(--mediumgrey);
+  margin-bottom: 30px;
+  line-height: 25px;
+  text-align: center;
+}
+/* #second-page {
+  visibility: hidden;
+} */
