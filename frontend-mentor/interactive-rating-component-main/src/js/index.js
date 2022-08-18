@@ -9,7 +9,10 @@ function setRate(num) {
 }
 
 function submitRate() {
-  // Pega o rate
-  // Seta visibility
-  // Seta innerhtml
+  const rating = document.getElementById('rating-return-text')
+  rating.innerHTML = `You selected ${selectedRate} out of 5`
+  const containerFirstPage = document.getElementById('first-page')
+  containerFirstPage.style.visibility = 'hidden'
+  const containerSecondPage = document.getElementById('second-page')
+  containerSecondPage.style.visibility = 'visible'
 }

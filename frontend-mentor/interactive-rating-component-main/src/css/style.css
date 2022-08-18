@@ -105,16 +105,17 @@ li {
 }
 
 .container-secondpage {
+  visibility: hidden;
   width: 415px;
   height: 415px;
   background-image: linear-gradient(to top, #171e28, #1c2430, #242e3d);
   margin: auto;
-  margin-top: 190px;
+  margin-top: -415px;
   border-radius: 35px;
   padding: 30px;
 }
 
-.rating-return {
+#rating-return-text {
   display: flex;
   width: 200px;
   height: 30px;
@@ -127,7 +128,7 @@ li {
   align-items: center;
   text-align: center;
   border-radius: 30px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .rating-image {
@@ -144,6 +145,3 @@ li {
   line-height: 25px;
   text-align: center;
 }
-/* #second-page {
-  visibility: hidden;
-} */

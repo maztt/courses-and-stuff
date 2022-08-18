@@ -1,0 +1,49 @@
+@media (max-width: 430px) {
+  .container-firstpage,
+  .container-secondpage {
+    width: 330px;
+    height: 360px;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .description-firstpage {
+    font-size: 14px;
+  }
+
+  .description-secondpage {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .button {
+    width: 280px;
+    height: 45px;
+    margin-top: 5px;
+  }
+
+  .title,
+  h2 {
+    font-size: 24px;
+  }
+
+  li {
+    width: 45px;
+    height: 45px;
+    margin-bottom: -15px;
+  }
+
+  .rating-image {
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+  }
+
+  #rating-return-text {
+    width: 170px;
+  }
+}
