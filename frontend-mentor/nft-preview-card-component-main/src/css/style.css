@@ -31,6 +31,7 @@ body {
   width: 350px;
   height: 600px;
   border-radius: 15px;
+  box-shadow: 0px 20px 1px 15px var(--white);
 }
 
 .nft-image {
@@ -54,11 +55,12 @@ body {
   margin-bottom: 25px;
   font-size: 18px;
   color: var(--softblue);
+  line-height: 25px;
 }
 
 .nft-stats {
   display: flex;
-  gap: 6px;
+  gap: 120px;
   margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 25px;
@@ -66,14 +68,26 @@ body {
 }
 
 .nft-price {
+  margin-left: 10px;
+  display: flex;
+  gap: 100px;
   font-size: 16px;
   color: var(--cyan);
 }
 
 .nft-deadline {
+  margin-left: -80px;
+  display: flex;
+  gap: 100px;
   font-size: 15px;
   color: var(--softblue);
 }
+
+.nft-stats-price, .nft-stats-deadline {
+  width: 100px;
+  display: flex;
+}
+
 
 hr {
   width: 300px;
@@ -104,4 +118,20 @@ hr {
 strong {
   color: white;
   font-weight: normal;
+}
+
+.nft-id:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+strong:hover {
+  color: var(--cyan);
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.nft-image:hover {
+  opacity: .3;
+  cursor: pointer;
 }
