@@ -10,12 +10,12 @@
 }
 
 :root {
---softblue: hsl(215, 51%, 70%);
---cyan: hsl(178, 100%, 50%);
---mainblue: hsl(217, 54%, 11%);
---bgblue: hsl(216, 50%, 16%);
---lineblue: hsl(215, 32%, 27%);
---white: hsl(0, 0%, 100%);
+  --softblue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --mainblue: hsl(217, 54%, 11%);
+  --bgblue: hsl(216, 50%, 16%);
+  --lineblue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
 }
 
 body {
@@ -31,10 +31,19 @@ body {
   width: 350px;
   height: 600px;
   border-radius: 15px;
-  box-shadow: 0px 20px 1px 15px black;
+  box-shadow: 0px 30px 10px 15px #091629;
 }
 
+.nft-image-background {
+  position: absolute;
+  background-color: var(--cyan);
+  margin: 25px 25px 20px 25px;
+  width: 300px;
+  height: 300px;
+  border-radius: 9px;
+}
 .nft-image {
+  position: relative;
   margin: 25px 25px 20px 25px;
   width: 300px;
   height: 300px;
@@ -47,40 +56,59 @@ body {
   margin-bottom: 15px;
   font-size: 22px;
   color: var(--white);
+  font-weight: bold;
 }
 
 .nft-description {
   margin-left: 25px;
   margin-right: 25px;
-  margin-bottom: 25px;
   font-size: 18px;
   color: var(--softblue);
   line-height: 25px;
+  font-weight: lighter;
 }
 
 .nft-stats {
-  display: flex;
   margin-left: 25px;
   margin-right: 25px;
-  margin-bottom: 25px;
+  display: flex;
+  height: 70px;
   justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nft-stats > img {
+  display: inline-block;
+}
+
+.nft-stats-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
 }
 
 .nft-price {
-  margin-left: 10px;
-  display: inline;
+  display: inline-block;
   font-size: 16px;
   color: var(--cyan);
 }
 
+.nft-stats-deadline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
 .nft-deadline {
-  margin-left: -80px;
-  display: inline;
-  font-size: 15px;
+  display: inline-block;
   color: var(--softblue);
 }
 
 hr {
+  margin-top: -2px;
   width: 300px;
   margin-left: 25px;
   height: 0px;
@@ -123,7 +151,6 @@ strong:hover {
 }
 
 .nft-image:hover {
-  opacity: .3;
+  opacity: 0.5;
   cursor: pointer;
 }
-

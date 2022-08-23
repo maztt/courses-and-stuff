@@ -1,0 +1,49 @@
+@media (max-width: 400px) {
+  .container {
+    height: 550px;
+    width: 330px;
+  }
+
+  .nft-image-background {
+    width: 280px;
+    height: 280px;
+  }
+
+  .nft-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .nft-id {
+    font-size: 21px;
+    letter-spacing: 1px;
+  }
+
+  .nft-description {
+    font-size: 16px;
+  }
+
+  .nft-price {
+    font-size: 15px;
+  }
+
+  .nft-deadline {
+    font-weight: lighter;
+  }
+
+  hr {
+    width: 280px;
+  }
+
+  .creator-info {
+    font-size: 15px;
+  }
+
+  .nft-stats {
+    height: 50px;
+  }
+
+  strong {
+    font-weight: lighter;
+  }
+}
