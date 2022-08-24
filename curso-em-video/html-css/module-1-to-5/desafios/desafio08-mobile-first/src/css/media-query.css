@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* Medium devices (landscape tablets) */
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url('../images/back-tablet.jpg');
+  }
+
+  img#phone {
+    display: none;
+  }
+  img#pc {
+    display: none;
+  }
+  img#tv {
+    display: none;
+  }
+  img#tablet {
+    display: block;
+  }
+  img#print {
+    display: none;
+  }
+}
+
+/* Large devices (laptops, desktops) */
+
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url('../images/back-pc.jpg');
+  }
+
+  img#phone {
+    display: none;
+  }
+  img#pc {
+    display: block;
+  }
+  img#tv {
+    display: none;
+  }
+  img#tablet {
+    display: none;
+  }
+  img#print {
+    display: none;
+  }
+}
+
+/* Extra large devices (large laptops, large desktops, TVs) */
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url('../images/back-tv.jpg');
+  }
+
+  main {
+    width: 700px;
+  }
+
+  img#phone {
+    display: none;
+  }
+  img#pc {
+    display: none;
+  }
+  img#tv {
+    display: block;
+  }
+  img#tablet {
+    display: none;
+  }
+  img#print {
+    display: none;
+  }
+}
+
+/* Printable */
+
+@media print {
+  * {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  body {
+    background-image: url('../images/back-print.jpg');
+    /* Backgrounds aren't printable, although you can change the print display. */
+  }
+
+  main {
+    border: 2px solid black;
+  }
+
+  main h1 {
+    text-shadow: none;
+    color: black;
+  }
+
+  img#phone {
+    display: none;
+  }
+  img#pc {
+    display: none;
+  }
+  img#tv {
+    display: none;
+  }
+  img#tablet {
+    display: none;
+  }
+  img#print {
+    display: block;
+  }
+
+  main::after {
+    content: "This is the first Mobile First page I've ever made.";
+  }
+}
