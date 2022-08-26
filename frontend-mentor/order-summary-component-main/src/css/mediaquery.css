@@ -17,8 +17,19 @@
     height: 195px;
   }
 
+  .brand-plan {
+    margin-left: 40px;
+    width: 310px;
+  }
+
+  .brand-plan > img {
+    width: 45px;
+    height: 45px;
+    margin-right: -65px;
+  }
+
   .brand-header {
-    margin-top: -5px;
+    margin-top: 1px;
   }
 
   .brand-title {
@@ -27,5 +38,21 @@
 
   .brand-pitch {
     margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .brand-payment-confirm {
+    margin-left: 20px;
+    width: 310px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .brand-payment-cancel {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 310px;
+    height: 45px;
+    font-size: 14px;
   }
 }

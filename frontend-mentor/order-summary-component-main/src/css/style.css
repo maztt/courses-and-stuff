@@ -5,140 +5,144 @@
 /* Extra small devices (phones, max-width: 600px) */
 
 * {
-margin: 0px;
-padding: 0px;
-box-sizing: border-box;
-font-family: 'Red Hat Display', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 :root {
---paleblue: hsl(225, 100%, 94%);
---brightblue: hsl(245, 75%, 52%);
---verypaleblue: hsl(225, 100%, 98%);
---desaturedblue: hsl(224, 23%, 55%);
---darkblue: hsl(223, 47%, 23%);
+  --paleblue: hsl(225, 100%, 94%);
+  --brightblue: hsl(245, 75%, 52%);
+  --verypaleblue: hsl(225, 100%, 98%);
+  --desaturedblue: hsl(224, 23%, 55%);
+  --darkblue: hsl(223, 47%, 23%);
 }
 
 body {
-background-image: url('../images/pattern-background-mobile.svg');
-background-color: var(--paleblue);
-background-repeat: no-repeat;
-background-size: contain;
-background-position: top left;
-
+  background-image: url('../images/pattern-background-mobile.svg');
+  background-color: var(--paleblue);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .container {
-margin: auto;
-margin-top: 70px;
-width: 330px;
-height: 570px;
-background-color: var(--verypaleblue);
-border-radius: 20px;
+  margin: auto;
+  margin-top: 70px;
+  width: 330px;
+  height: 570px;
+  background-color: var(--verypaleblue);
+  border-radius: 20px;
 }
 
 .illustration {
-width: 330px;
-height: 160px;
-border-radius: 20px 20px 0px 0px;
+  width: 330px;
+  height: 160px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .brand-header {
-margin-top: -10px;
-padding: 35px;
+  margin-top: -10px;
+  padding: 35px;
 }
 
 .brand-title {
-text-align: center;
-font-size: 22px;
-font-weight: 900;
-color: var(--darkblue);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--darkblue);
 }
 
 .brand-pitch {
-margin-top: 20px;
-font-size: 15px;
-text-align: center;
-line-height: 25px;
-color: var(--desaturedblue);
+  margin-top: 20px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 25px;
+  color: var(--desaturedblue);
 }
 
 .brand-plan {
-padding: 0px 40px;
-display: flex;
-flex-direction: row;
-align-items: center;
+  margin-top: -10px;
+  margin-left: 25px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: hsl(225, 80%, 96.5%);
+  width: 280px;
+  border-radius: 10px;
+  justify-content: space-between;
 }
 
 .brand-plan > img {
-width: 50px;
-height: 50px;
-margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  margin-right: -35px;
 }
 
 .brand-plan-type {
-font-size: 14px;
-font-weight: 900;
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .brand-plan-price {
-margin-top: 2px;
-font-size: 14px;
-color: var(--desaturedblue);
-font-weight: 500;
+  margin-top: 5px;
+  font-size: 14px;
+  color: var(--desaturedblue);
+  font-weight: 500;
 }
 
 .brand-payment {
-margin-top: 35px;
-display: inline-block;
-padding: 0px 30px;
+  margin-top: 25px;
+  display: inline-block;
+  padding: 0px 25px;
 }
 
 .brand-plan-change {
-margin-left: 50px;
-text-decoration: underline;
-font-size: 13px;
-font-weight: 700;
-color: #5449B1;
+  text-decoration: underline;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5449b1;
 }
 
 .brand-plan-change:hover {
-text-decoration: none;
-color: hsla(245, 75%, 52%, 0.637);
-cursor: pointer;
+  text-decoration: none;
+  color: hsla(245, 75%, 52%, 0.637);
+  cursor: pointer;
 }
 
 button {
-width: 280px;
-height: 50px;
-border: none;
+  width: 280px;
+  height: 50px;
+  border: none;
 }
 
 .brand-payment-confirm {
-margin-top: 5px;
-background-color: var(--brightblue);
-color: white;
-font-size: 15px;
-font-weight: 700;
-border-radius: 10px;
-box-shadow: 3px 7px 20px 5px hsla(0, 0%, 0%, 0.192);
+  margin-top: 5px;
+  margin: auto;
+  background-color: var(--brightblue);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 3px 7px 20px 5px hsla(0, 0%, 0%, 0.192);
 }
 
 .brand-payment-confirm:hover {
-background-color: hsla(245, 75%, 52%, 0.637);
-cursor: pointer;
+  background-color: hsla(245, 75%, 52%, 0.637);
+  cursor: pointer;
 }
 
 .brand-payment-cancel {
-margin-top: 25px;
-height: 15px;
-background-color: var(--verypaleblue);
-color: var(--desaturedblue);
-font-size: 15px;
-font-weight: 900;
+  margin-top: 25px;
+  height: 15px;
+  background-color: var(--verypaleblue);
+  color: var(--desaturedblue);
+  font-size: 15px;
+  font-weight: 900;
 }
 
 .brand-payment-cancel:hover {
-cursor: pointer;
-color: var(--darkblue);
+  cursor: pointer;
+  color: var(--darkblue);
 }
