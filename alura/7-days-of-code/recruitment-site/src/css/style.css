@@ -119,6 +119,7 @@ button#signup {
   display: flex;
   padding: 0px 112px;
   justify-content: space-between;
+  height: 288px;
 }
 
 .metrics-item {
@@ -140,4 +141,40 @@ h3 {
 p {
   font-size: 16px;
   margin-top: 8px;
+}
+
+.jobs {
+  height: 1798px;
+  background-color: white;
+}
+
+.jobs-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.jobs-title {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+.jobs-description {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+section > img {
+  margin: auto;
+  margin-top: 64px;
+  display: block;
 }
