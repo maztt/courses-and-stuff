@@ -126,7 +126,7 @@ button#signup {
   width: 280px;
 }
 
-span {
+div.metrics-item > span {
   font-size: 60px;
   color: var(--main-color);
   font-weight: 600;
@@ -178,3 +178,92 @@ section > img {
   margin-top: 64px;
   display: block;
 }
+
+.jobs-container-wrapper {
+  display: block;
+  margin: 0px 80px 96px 80px;
+}
+
+.jobs-container {
+  margin: 0 256px;
+}
+
+.jobs-classification {
+  margin-top: 64px;
+  margin-bottom: 32px;
+  font-size: 20px;
+}
+
+.jobs-item {
+  padding: 24px 24px 28px 24px;
+  margin-bottom: 24px;
+}
+
+.jobs-item-role {
+  display: block;
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+
+.jobs-item-type {
+  margin-right: 24px;
+}
+
+.jobs-item-type, .jobs-item-salary {
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.feedbacks {
+  background-color: white;
+}
+
+.feedback-container {
+  margin: 0px 80px;
+  padding: 0px 32px;
+}
+
+.feedback-info {
+  margin: 64px 64px 32px 64px;
+}
+
+.feedback-header {
+  display: flex;
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.feedback-quote {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.feedback-attribution {
+  margin: 64px 64px 32px 64px;
+}
+
+.feedback-photo, .feedback-author, .feedback-role {
+  display: block;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.feedback-photo {
+  margin-bottom: 16px;
+}
+
+.feedback-author {
+  margin-bottom: 4px;
+}
+
+.feedback-role {
+  color: var(--text-color);
+  font-size: 14px;
+}
+
