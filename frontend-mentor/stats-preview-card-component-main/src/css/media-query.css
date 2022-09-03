@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 600px) {
+  .card {
+    display: flex;
+    height: 450px;
+    width: 1110px;
+    margin: 170px auto;
+    border-radius: 10px;
+  }
+
+  .card-image, img {
+    width: 540px;
+    height: 450px;
+    order: 2;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .card-info {
+    padding: 70px 75px 60px 75px;
+  }
+
+  .card-header, strong {
+    text-align: left;
+    font-size: 35px;
+    margin-bottom: 25px;
+    line-height: 45px;
+    letter-spacing: 1px;
+  } 
+  
+  .card-description {
+    text-align: left;
+    font-size: 15px;
+    margin-right: 70px;
+    margin-bottom: 75px;
+  }
+
+  .card-items {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .number, .type {
+    text-align: left;
+  }
+}
