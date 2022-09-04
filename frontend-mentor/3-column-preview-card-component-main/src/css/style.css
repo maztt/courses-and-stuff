@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+:root {
+  --brightorange: hsl(31, 77%, 52%);
+  --darkcyan: hsl(184, 100%, 22%);
+  --verydarkcyan: hsl(179, 100%, 13%);
+  --transparentwhite: hsla(0, 0%, 100%, 0.75);
+  --lightgray: hsl(0, 0%, 95%);
+}
+
+.card {
+  height: 705px;
+  width: 170px;
+  margin: 45px auto;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  height: 235px;
+  width: 170px;
+  padding: 25px 25px 0px 25px;
+}
+
+.sedan {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: var(--brightorange);
+}
+
+.suv {
+  background-color: var(--darkcyan);
+}
+
+.luxury {
+  background-color: var(--verydarkcyan);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+img {
+  width: 35px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--transparentwhite);
+  font-size: 8px;
+  line-height: 13px;
+  margin-bottom: 15px;
+}
+
+button {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: white;
+  color: black;
+  width: 80px;
+  height: 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 8px;
+}
+
+.btn-sedan {
+  color: var(--brightorange);
+}
+
+.btn-suv {
+  color: var(--darkcyan);
+}
+
+.btn-luxury {
+  color: var(--verydarkcyan);
+}
+
+.btn-sedan:hover {
+  cursor: pointer;
+  background-color: var(--brightorange);
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-suv:hover {
+  cursor: pointer;
+  background-color: var(--darkcyan);
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-luxury:hover {
+  cursor: pointer;
+  background-color: var(--verydarkcyan);
+  color: white;
+  border: 2px solid white;
+}
