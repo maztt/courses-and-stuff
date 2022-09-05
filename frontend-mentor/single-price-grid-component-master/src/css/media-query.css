@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 600px) {
+  .card {
+    margin-top: 165px; 
+    width: 640px;
+    height: 475px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  }
+  
+  .card-info {
+    padding: 40px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .card-info > h1 {
+    font-size: 23px;
+  }
+
+  .card-info > span {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .card-info > p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .card-outro {
+    border-radius: 0px 0px 10px 0px;
+  }
+
+  .card-plans {
+    border-radius: 0px 0px 0px 10px;
+  }
+
+  .card-plans, .card-outro {
+    display: inline-block;
+    width: 50%;
+    padding: 45px 40px 45px 40px;
+  }
+
+  section {
+    display: flex;
+  }
+}
