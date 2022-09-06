@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 600px) {
+  .container {
+    display: flex;
+  }
+
+  section {
+    display: inline-block;
+    margin: auto;
+    width: 535px;
+  }
+
+  .outside-text > h1 {
+    text-align: left;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .outside-text > p {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .outside-text,
+  .card-trial,
+  .card-signin {
+    width: 100%;
+  }
+
+  .card-trial,
+  .card-signup {
+    display: block;
+  }
+
+  .btn-trial {
+    width: 100%;
+  }
+}
