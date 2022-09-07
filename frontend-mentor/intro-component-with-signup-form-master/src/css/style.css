@@ -123,3 +123,7 @@ a {
   font-weight: 700;
   text-decoration: none;
 }
+
+input:required:valid {
+  background-image: url('../images/icon-error.svg')
+}

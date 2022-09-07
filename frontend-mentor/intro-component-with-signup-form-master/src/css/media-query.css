@@ -1,10 +1,21 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 600px) {
-  .container {
-    display: flex;
+
+  body {
+    margin-top: 75px;
+    background-image: url('../images/bg-intro-desktop.png');
+    background-color: var(--red);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
+  .container {
+    display: flex;
+    width: 80%;
+    margin: 165px auto;
+  }
+  
   section {
     display: inline-block;
     margin: auto;
@@ -15,11 +26,18 @@
     text-align: left;
     font-size: 50px;
     line-height: 60px;
+    margin-bottom: 30px;
   }
 
   .outside-text > p {
     text-align: left;
     font-size: 16px;
+    line-height: 25px;
+  }
+
+  .btn-trial {
+    height: 60px;
+    font-size: 15px;
   }
 
   .outside-text,
@@ -28,8 +46,33 @@
     width: 100%;
   }
 
+  .card-signin {
+    height: 100%;
+    padding: 40px;
+  }
+
+  input {
+    color: black;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .btn-claim {
+    margin: 0;
+    height: 55px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px 20px;
+  }
+
+  .card-signin > p {
+    margin-top: 15px;
+    font-size: 11px;
+  }
+
   .card-trial,
-  .card-signup {
+  .card-signin {
     display: block;
   }
 
