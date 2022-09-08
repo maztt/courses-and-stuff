@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor para Frontenders</title>
+  <style>
+    body {
+  font-family: "Roboto Mono", monospace;
+  background-image: url('https://extrachill.com/wp-content/uploads/2021/03/pink-floyd-dark-side-of-the-moon.jpg');
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+input {
+  margin: 12px;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+label {
+  color: white;
+}
+
+button {
+  margin-top: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title">
+      Pixels para EM conversor
+    </h1>
+    <p class="page-subtitle">
+      Descubra a correspodência de Pixels para EM<br>
+      Isso deve te ajudar a construir as suas páginas
+    </p>
+    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
+    <label for="moeda">Insira os pixels</label><br>
+    <input type="number" id="valor" size="2" /><br>
+    <button type="submit" onclick="converterValor()">Converter</button>
+    <h2 id="valorConvertido"></h2>
+  </div>
+  <a href="https://alura.com.br/" target="_blank">
+    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    <script src="index.js"></script>
+</body>
+</html>
