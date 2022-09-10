@@ -124,11 +124,32 @@ a {
   text-decoration: none;
 }
 
-.error {
+/* .error {
   background-image: url('../images/icon-error.svg');
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 95%;
   border: 2px solid hsl(0, 100%, 74%);
   margin-bottom: 30px;
+} */
+
+input:invalid {
+  background-image: url('../images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 95%;
+  border: 2px solid hsl(0, 100%, 74%);
+  margin-bottom: 30px;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
 }
