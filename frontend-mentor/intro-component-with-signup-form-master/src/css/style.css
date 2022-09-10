@@ -10,7 +10,7 @@
 }
 
 :root {
-  --red: hsl(0, 100%, 74%) ;
+  --red: hsl(0, 100%, 74%);
   --green: hsl(154, 59%, 51%);
   --blue: hsl(248, 32%, 49%);
   --darkblue: hsl(249, 10%, 26%); 
@@ -124,6 +124,11 @@ a {
   text-decoration: none;
 }
 
-input:required:valid {
-  background-image: url('../images/icon-error.svg')
+.error {
+  background-image: url('../images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 95%;
+  border: 2px solid hsl(0, 100%, 74%);
+  margin-bottom: 30px;
 }
