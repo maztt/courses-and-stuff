@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 600px) {
+  .card {
+    width: 355px;
+    height: 375px;
+  }
+
+  .card-banner {
+    width: 355px;
+    height: 140px;
+  }
+}
