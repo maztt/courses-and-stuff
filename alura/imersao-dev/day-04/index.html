@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraFlix - Dia 04</title>
+  <style>
+    body {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  background-image: url("https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-04-aluraflix-e-filmes.png");
+  background-color: #000000;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+body > img {
+  margin: 0 10px;
+}
+
+img {
+  max-height: 250px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title">
+      Aluraflix
+    </h1>
+    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+  </div>
+  <a href="https://alura.com.br/" target="_blank">
+    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+  </a>
+</body>
+<script>
+  const INTERSTELLAR = 'https://m.media-amazon.com/images/I/A1JVqNMI7UL._AC_SL1500_.jpg';
+  const MARTIAN = 'https://vitralizado.com/wp-content/uploads/2015/08/TheMartianNovo.jpg';
+  const GRAVITY = 'https://upload.wikimedia.org/wikipedia/pt/a/ac/Gravity.jpg';
+  const FORALLMANKIND = 'https://filmi123.club/storage/2021/11/v-imeto-na-chovechestvoto-75014-poster.jpg';
+
+  const MOVIES = [INTERSTELLAR, MARTIAN, GRAVITY, FORALLMANKIND]
+
+  MOVIES.forEach(movie => {
+    document.write("<img src=" + movie + ">")
+  })
+</script>
+</html>
