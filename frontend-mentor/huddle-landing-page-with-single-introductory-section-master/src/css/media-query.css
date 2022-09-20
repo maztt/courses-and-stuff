@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 600px) {
+  body {
+    background-image: url('../images/bg-desktop.svg');
+  }
+
+  .container {
+    width: 1440px;
+    padding: 0px 75px;
+    align-items: center;
+  }
+
+  .info {
+    width: 510px;
+    padding: 0px 5px;
+    display: inline-block;
+    margin: 0px auto;
+  }
+  
+  .logo img {
+    width: 200px;
+  }
+
+  .mockups img {
+    display: inline-block;
+    margin-top: 75px;
+    margin-right:55px;
+    width: 690px;
+  }
+
+  .title {
+    margin: 0;
+    text-align: left;
+    font-size: 37px;
+    width: 420px;
+  }
+
+  .description {
+    text-align: left;
+    font-size: 18px;
+    width: 510px;
+  }
+  
+  button {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    justify-content: flex-start;
+  }
+  
+}
