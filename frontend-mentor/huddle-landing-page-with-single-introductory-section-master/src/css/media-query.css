@@ -7,46 +7,61 @@
 
   .container {
     width: 1440px;
-    padding: 0px 75px;
-    align-items: center;
+    padding: 55px 75px;
   }
 
-  .info {
-    width: 510px;
-    padding: 0px 5px;
+  .container-images {
     display: inline-block;
-    margin: 0px auto;
-  }
-  
-  .logo img {
-    width: 200px;
-  }
-
-  .mockups img {
-    display: inline-block;
-    margin-top: 75px;
-    margin-right:55px;
     width: 690px;
   }
 
+  .container-text {
+    display: inline-block;
+    width: 525px;
+    vertical-align: top;
+    margin: 180px 0 0 60px;
+  }
+
+  .container-images img:nth-child(1) {
+    display: block;
+    width: 30%;
+    margin-bottom: 95px;
+  }
+  
+  .container-images img:nth-child(2) {
+    display: block;
+    width: 100%;
+  }
+
   .title {
-    margin: 0;
     text-align: left;
-    font-size: 37px;
-    width: 420px;
+    font-size: 40px;
+    margin-bottom: 20px;
   }
 
   .description {
     text-align: left;
-    font-size: 18px;
-    width: 510px;
+    font-size: 17px;
+    margin-bottom: 25px;
   }
-  
-  button {
-    width: 200px;
-    height: 60px;
-    font-size: 18px;
+
+  .button {
+    margin: 0;
     justify-content: flex-start;
+    height: 60px;
+    width: 40%;
+    font-size: 20px;
   }
-  
+
+  .social {
+    margin-top: 100px;
+    justify-content: flex-end;
+    vertical-align: bottom;
+    gap: 20px;
+  }
+
+  .social img {
+    width: 7%;
+  }
+
 }
