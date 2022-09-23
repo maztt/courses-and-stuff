@@ -4,53 +4,29 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const input = document.querySelectorAll('input');
 
+const display_list = document.querySelectorAll('div.under-display')
+const display_array = [...display_list];
+
+const elements = [firstName, lastName, email, password]
+
 function formValidator() {
+  elements.forEach(element => {
+    if (element.value === '') {
+      element.classList.add('invalid-input');
+    } else {
+      element.classList.remove('invalid-input');
+    }
+  })
 
-  const firstNameValue = firstName.value.trim();
-  const lastNameValue = lastName.value.trim();
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-
-
-  if (firstNameValue === '') {
-    setErrorFor(firstName, 'First Name cannot be blank');
-  } else {
-    setSuccessFor(firstName);
+  if (elements[2].value === '') {
+    elements[2].classList.add('invalid-email');
   }
-
-  if (lastNameValue === '') {
-    setErrorFor(lastName, 'Last Name cannot be blank');
-  } else {
-    setSuccessFor(lastName);
-  }
-
-  if (emailValue === '') {
-    setErrorFor(email, 'First Name cannot be blank');
-  } else {
-    setSuccessFor(email);
-  }
-
-  if (passwordValue === '') {
-    setErrorFor(password, 'Password cannot be blank');
-  } else {
-    setSuccessFor(password);
+  
+  for (let i = 0; i <= display_array.length; i++) {
+    if (elements[i].value === '') {
+      display_array[i].classList.add('invalid');
+    } else {
+      display_array[i].classList.remove('invalid');
+    }
   }
 }
-
-function setErrorFor(input, message) {
-}
-
-function setSuccessFor(input) {
-}
-	
-// function isEmail(email) {
-// 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-// }
-
-// firstName.addEventListener("blur", () => {
-//   if (firstName.isEmpty()) {
-
-//   } else {
-
-//   }
-// })
