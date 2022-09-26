@@ -18,11 +18,21 @@
   --white: hsl(0, 0%, 100%);
 }
 
-body {
-  width: 375px;
+html {
+  overflow-x: hidden;
 }
 
-div.container{
+body {
+  width: 375px;
+  margin: auto;
+  background-image: url('../images/bg-pattern-top-mobile.svg'),
+    url('../images/bg-pattern-bottom-mobile.svg');
+  background-position: top left, bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+div.container {
   margin-top: 80px;
   margin-bottom: 80px;
 }
@@ -37,7 +47,7 @@ h1.product-merchan {
   color: var(--darkmagenta);
   font-size: 38px;
   margin: auto;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
 p.product-merchan {
@@ -57,10 +67,11 @@ section.container-ratings {
 div.ratings {
   width: 80%;
   margin: auto;
-  background-color: var(--lightmagenta); 
+  background-color: var(--lightmagenta);
   margin-bottom: 20px;
   text-align: center;
   padding: 15px 0px;
+  border-radius: 5px;
 }
 
 span.ratings-origin {
@@ -73,7 +84,7 @@ div.stars {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 div.card-depo {
@@ -115,8 +126,5 @@ p.depo-text {
   color: var(--white);
   font-size: 17px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 22px;
 }
-
-
-
