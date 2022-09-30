@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 09 - Imersão Dev</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/maztt.png" />
+        <div class="titulo">
+          <h1>Júlio Mazotti</h1>
+          <h3>Aspiring to become a Mobile Developer</h3>
+        </div>
+      </div>
+      <div class="tema">
+        <button onclick="themeMode()">Dark / Light</button>
+      </div>
+    </header>
+
+    <main class="projetos">
+      <ul class="projetos-titulo">Projetos<ul>
+          <li class="projetos-item"><a href="#"> Projeto 1</a></li>
+          <li class="projetos-item"><a href="#"> Projeto 2</a></li>
+    </main>
+  </div>
+  <script>
+    function themeMode() {
+      document.body.classList.toggle('dark')
+    }
+  </script>
+</body>
+</html>
