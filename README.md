@@ -28,6 +28,7 @@ Frontendmentor is a plataform where you can get challenges to practice your skil
 <li> <b>Intro SignUp</b> -
 <li> <b>Huddle Landing Page</b> -
 <li> <b>Social Proof Section</b> - 
+<li> <b>Four Card Feature Section</b> -
 </ol>
 
 
