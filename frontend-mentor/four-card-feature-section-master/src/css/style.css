@@ -7,7 +7,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -18,4 +18,89 @@
   --darkblue: hsl(234, 12%, 34%);
   --grayblue: hsl(229, 6%, 66%);
   --lightgray: hsl(0, 0%, 98%);
+}
+
+.container {
+  padding: 85px 30px 75px;
+  background-color: var(--lightgray);
+  width: 375px;
+  margin: auto;
+}
+
+div.card-text {
+  width: 315px;
+  text-align: center;
+}
+
+span.text-one {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+span.text-two {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--darkblue);
+}
+
+p.text-three {
+  margin-top: 20px;
+  color: var(--grayblue);
+  line-height: 1.6rem;
+  margin-bottom: 70px;
+}
+
+
+div.product-card {
+  width: 315px;
+  height: 225px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+div.product-card:nth-child(1) {
+  border-top: 3px solid var(--cyan);
+}
+
+div.product-card:nth-child(2) {
+  margin-top: 25px;
+  border-top: 3px solid var(--red);
+}
+
+div.product-card:nth-child(3) {
+  margin-top: 25px;
+  border-top: 3px solid var(--orange);
+}
+
+div.product-card:nth-child(4) {
+  margin-top: 25px;
+  border-top: 3px solid var(--blue);
+}
+
+
+h2.product-title {
+  color: var(--darkblue);
+  font-size: 1.3rem;
+}
+
+span.product-desc {
+  color: var(--grayblue);
+  font-size: .8rem;
+}
+
+div.product-img > img {
+  height: 55px;
+}
+
+div.product-img {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.product-info {
+  width: 250px;
 }
