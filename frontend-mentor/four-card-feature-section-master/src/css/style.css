@@ -59,25 +59,31 @@ div.product-card {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border-radius: 5px;
   padding: 30px;
+  opacity: .8;
+}
+
+div.product-card:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 div.product-card:nth-child(1) {
-  border-top: 3px solid var(--cyan);
+  border-top: 0.1875rem solid var(--cyan);
 }
 
 div.product-card:nth-child(2) {
   margin-top: 25px;
-  border-top: 3px solid var(--red);
+  border-top: 0.1875rem solid var(--red);
 }
 
 div.product-card:nth-child(3) {
   margin-top: 25px;
-  border-top: 3px solid var(--orange);
+  border-top: 0.1875rem solid var(--orange);
 }
 
 div.product-card:nth-child(4) {
   margin-top: 25px;
-  border-top: 3px solid var(--blue);
+  border-top: 0.1875rem solid var(--blue);
 }
 
 
