@@ -38,7 +38,7 @@ const data = [
 
 // Elementos
 
-const imcTable = document.querySelector('#imc-table');
+const bmiTable = document.querySelector('#bmi-table');
 
 const heightInput = document.querySelector('#height');
 const weightInput = document.querySelector('#weight');
@@ -48,8 +48,8 @@ const clearBtn = document.querySelector('#clear-btn');
 const calcContainer = document.querySelector('#calc-container');
 const resultContainer = document.querySelector('#result-container');
 
-const imcNumber = document.querySelector('#imc-number span');
-const imcInfo = document.querySelector('#imc-info span');
+const bmiNumber = document.querySelector('#bmi-number span');
+const bmiInfo = document.querySelector('#bmi-info span');
 
 const backBtn = document.querySelector('#back-btn')
 
@@ -73,7 +73,7 @@ function createTable(data) {
     div.appendChild(info);
     div.appendChild(obesity);
 
-    imcTable.appendChild(div);
+    bmiTable.appendChild(div);
   })
 }
 
@@ -84,8 +84,8 @@ createTable(data)
 function clearInputs () {
   heightInput.value = ''
   weightInput.value = ''
-  imcNumber.classList = ''
-  imcInfo.classList = ''
+  bmiNumber.classList = ''
+  bmiInfo.classList = ''
 }
 
 clearBtn.addEventListener('click', (e) => {
@@ -110,10 +110,10 @@ function validDigits(text) {
 
 // Calculador de input
 
-function calcImc(weight, height) {
-  const imc = (weight / (height * height)).toFixed(1);
+function calcBmi(weight, height) {
+  const bmi = (weight / (height * height)).toFixed(1);
 
-  return imc;
+  return bmi;
 }
 
 calcBtn.addEventListener('click', (e) => {
@@ -124,44 +124,44 @@ calcBtn.addEventListener('click', (e) => {
 
   if (!weight || !height) return;
 
-  const imc = calcImc(weight, height);
+  const bmi = calcBmi(weight, height);
 
 
   let info;
 
   data.forEach(item => {
-    if (imc >= item.min && imc <= item.max) {
+    if (bmi >= item.min && bmi <= item.max) {
       info = item.info;
     }
   })
 
   if (!info) return;
 
-  imcNumber.innerText = imc;
-  imcInfo.innerText = info;
+  bmiNumber.innerText = bmi;
+  bmiInfo.innerText = info;
 
   showOrHideResults();
 
   switch (info) {
     case "Abaixo do peso":
-      imcNumber.classList.add('low');
-      imcInfo.classList.add('low');
+      bmiNumber.classList.add('low');
+      bmiInfo.classList.add('low');
       break
     case "Peso ideal":
-      imcNumber.classList.add('good');
-      imcInfo.classList.add('good');
+      bmiNumber.classList.add('good');
+      bmiInfo.classList.add('good');
       break
     case "Sobrepeso":
-      imcNumber.classList.add('low');
-      imcInfo.classList.add('low');
+      bmiNumber.classList.add('low');
+      bmiInfo.classList.add('low');
       break
     case "Obesidade":
-      imcNumber.classList.add('medium');
-      imcInfo.classList.add('medium');
+      bmiNumber.classList.add('medium');
+      bmiInfo.classList.add('medium');
       break
     case "Obesidade grave":
-      imcNumber.classList.add('high');
-      imcInfo.classList.add('high');
+      bmiNumber.classList.add('high');
+      bmiInfo.classList.add('high');
       break
   }
 })

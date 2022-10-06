@@ -29,7 +29,7 @@ body {
   padding: 2rem;
 }
 
-/* IMC FORM */
+/* BMI FORM */
 
 #calc-container h2 {
   text-align: center;
@@ -93,12 +93,12 @@ button:hover {
   flex-direction: column;
 }
 
-#imc-number {
+#bmi-number {
   font-size: 2.4rem;
   margin-bottom: 0.6rem;
 }
 
-#imc-info {
+#bmi-info {
   font-size: 1.4rem;
   color: #ccc;
 }
@@ -108,7 +108,7 @@ button:hover {
   color: #dfdfdf;
 }
 
-#imc-table {
+#bmi-table {
   margin: 1.5rem 0;
   font-size: 0.8rem;
 }
