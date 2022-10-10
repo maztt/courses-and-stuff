@@ -25,10 +25,17 @@
         and our launch deals.
       </p>
       <div class="form-control">
-        <input type="email" name="email" id="email" placeholder="Email Address">
-        <input type="submit" value="">
+        <form>
+          <input type="email" name="email" id="email" placeholder="Email Address">
+          <!-- <input type="submit" value="env"> -->
+          <button type="submit" onclick="formValidator()">
+            <img src="src/images/icon-arrow.svg" alt="Arrow to Send Form">
+          </button>
+        </form>
+        <div id="error"></div>
       </div>
     </div>
     </div>
+    <script src="src/js/index.js"></script>
   </body>
 </html>

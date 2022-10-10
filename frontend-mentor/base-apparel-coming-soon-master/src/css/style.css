@@ -4,6 +4,7 @@
   margin: 0px;
   padding: 0px;
   font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
 }
 
 :root {
@@ -29,7 +30,7 @@ div.logo {
   height: 85px;
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  padding-left: 35px;
 }
 
 div.logo > img {
@@ -52,7 +53,7 @@ h1.page-title {
   font-size: 2.5rem;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: .5rem;
+  letter-spacing: .6rem;
   font-weight: 600;
   line-height: 2.5rem;
 }
@@ -63,40 +64,72 @@ span {
 }
 
 p.page-desc {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
   color: var(--red-one);
-  font-size: .9rem;
-  line-height: 1.3rem;
+  font-size: .85rem;
+  line-height: 1.4rem;
+  margin-bottom: 30px;
 }
 
 .form-control {
   display: flex;
-  margin: auto;
+}
+
+form {
+  width: 100%;
+  align-items: center;
 }
 
 input[type=email] {
-  margin-top: 35px;
-  padding: 10px 20px;
-  height: 20px;
+  display: inline-block;
+  font-weight: 600;
+  color: black;
+  padding: 15px 25px;
+  font-size: .85rem;
   width: 100%;
   border: 1px solid var(--red-one);
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-radius: 50px;
 }
 
-input::placeholder {
+input[type=email]::placeholder {
   color: var(--red-one);
+  opacity: .5;
 }
 
-input[type=submit] {
-  background: url('../images/icon-arrow.svg');
-  width: 65px;
-  height: 45px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+/* input[type=email]:invalid {
+  border: 2px solid var(--red-two);
+  background-image: url('../images/icon-error.svg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position-y: center;
+  background-position-x: 75%;
+} */
+
+button[type=submit] {
+  display: inline-block;
+  position: fixed;
+  right: 17%;  
+  width: 65px;
+  height: 47px;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border: none;
+  box-shadow:  hsla(0, 74%, 74%, 0.554) 0px 20px 25px -5px,  hsla(0, 74%, 74%, 0.456) 0px 10px 10px -5px;
+}
+
+button[type=submit]:hover {
+  background-image: linear-gradient(to right, hsl(0, 69%, 88%), hsl(0, 87%, 85%));
+  cursor: pointer;
+}
+
+div#error {
+  display: none;
+  padding-top: 5px;
+}
+
+div#error::after {
+  content: 'Please provide a valid email';
+  font-size: .8rem;
+  padding-left: 25px;
+  color: var(--red-two)
 }
