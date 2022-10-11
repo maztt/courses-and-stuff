@@ -1,13 +1,20 @@
-const errorDisplay = document.getElementById('div#error');
+const errorDisplay = document.getElementById('text-error');
 const inputEmail = document.getElementById('email');
+const btnSubmit = document.getElementById('submit');
+
+const emailRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/g;
 
 
-console.log(inputEmail);
+btnSubmit.addEventListener("click", (e) => {
+  e.preventDefault();
 
-function formValidator () {
-  if (inputEmail.checkValidity() == false) {
-    errorDisplay.style.display = 'visible';
+
+  if ( emailRegEx.test(inputEmail.value) ) {
+    errorDisplay.style.visibility = "hidden";
+    inputEmail.classList.remove("error");
+  } else {
+    errorDisplay.style.visibility = "visible";
+    inputEmail.classList.add("error");
   }
 
-
-}
+})

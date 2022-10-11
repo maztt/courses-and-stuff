@@ -1,0 +1,38 @@
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  div.container {
+    width: 1440px;
+  }
+
+  div.container :not(.image) {
+    display: block;
+    padding-left: 160px;
+    z-index: 1;
+    position: relative;
+  }
+
+  div.image {
+    display: inline-block;
+    z-index: 2;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  h1.page-title {
+    text-align: left;
+  }
+
+  p.page-desc {
+    text-align: left;
+  }
+
+  div.btn-overlay {
+    z-index: 3;
+  }
+
+}

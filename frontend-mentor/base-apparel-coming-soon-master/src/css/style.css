@@ -17,14 +17,14 @@
 }
 
 body {
-  background-image: url('../images/bg-pattern-desktop.svg');
+  height: 100%;
+  overflow: hidden;
 }
 
 div.container {
   width: 375px;
   margin: auto;
 }
-
 
 div.logo {
   height: 85px;
@@ -45,7 +45,7 @@ div.image {
 }
 
 div.card-text {
-  padding: 55px 35px;
+  padding: 60px 35px;
 }
 
 h1.page-title {
@@ -53,9 +53,9 @@ h1.page-title {
   font-size: 2.5rem;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: .6rem;
+  letter-spacing: .65rem;
   font-weight: 600;
-  line-height: 2.5rem;
+  line-height: 2.6rem;
 }
 
 span {
@@ -73,7 +73,7 @@ p.page-desc {
 }
 
 .form-control {
-  display: flex;
+  display: block;
 }
 
 form {
@@ -81,8 +81,9 @@ form {
   align-items: center;
 }
 
-input[type=email] {
+input[type=text] {
   display: inline-block;
+  z-index: 1;
   font-weight: 600;
   color: black;
   padding: 15px 25px;
@@ -92,29 +93,38 @@ input[type=email] {
   border-radius: 50px;
 }
 
-input[type=email]::placeholder {
+input[type=text]::placeholder {
   color: var(--red-one);
   opacity: .5;
 }
 
-/* input[type=email]:invalid {
+
+input.error {
   border: 2px solid var(--red-two);
   background-image: url('../images/icon-error.svg');
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 75%;
-} */
+}
+
+div.btn-overlay {
+  display: flex;
+  width: 100%;
+  z-index: 2;
+  margin-top: -45px;
+  justify-content: right;
+}
 
 button[type=submit] {
   display: inline-block;
-  position: fixed;
-  right: 17%;  
+  margin-right: -5px;
+  margin-top: -1px;
   width: 65px;
-  height: 47px;
+  height: 45px;
   border-radius: 50px;
   background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border: none;
-  box-shadow:  hsla(0, 74%, 74%, 0.554) 0px 20px 25px -5px,  hsla(0, 74%, 74%, 0.456) 0px 10px 10px -5px;
+  box-shadow: hsla(0, 74%, 74%, 0.554) 0px 20px 25px -5px,  hsla(0, 74%, 74%, 0.456) 0px 10px 10px -5px;
 }
 
 button[type=submit]:hover {
@@ -122,14 +132,14 @@ button[type=submit]:hover {
   cursor: pointer;
 }
 
-div#error {
-  display: none;
+div#text-error {
+  visibility: hidden;
   padding-top: 5px;
 }
 
-div#error::after {
+div#text-error::after {
   content: 'Please provide a valid email';
   font-size: .8rem;
   padding-left: 25px;
-  color: var(--red-two)
+  color: var(--red-two);
 }
