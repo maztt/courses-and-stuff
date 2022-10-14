@@ -3,36 +3,52 @@
     background-image: url('../images/bg-pattern-desktop.svg');
     background-repeat: no-repeat;
     background-size: contain;
-  }
-
-  div.container {
     width: 1440px;
+    }
+
+    div.container {
+      width: 1440px;
+      display: grid;
+      grid-template-columns: 60% 40%;
+      height: 100vh;
+    }
+
+    div.image {
+      background-image: url('../images/hero-desktop.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+  /* div.container {
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+    "text . image"
+    "text . image"
+  }
+  
+  div.logo, div.card-text {
+    grid-area: text;
+    padding-left: 160px;
   }
 
-  div.container :not(.image) {
-    display: block;
-    padding-left: 160px;
-    z-index: 1;
-    position: relative;
+  div.logo {
+    padding-top: 130px;
+  }
+
+  div.card-text {
+    padding-top: 330px;
   }
 
   div.image {
-    display: inline-block;
-    z-index: 2;
-    background-position: right;
+    grid-area: image;
+    background-image: url('../images/hero-desktop.jpg');
+    height: 100vh;
     background-repeat: no-repeat;
-  }
-
-  h1.page-title {
-    text-align: left;
-  }
-
-  p.page-desc {
-    text-align: left;
-  }
-
-  div.btn-overlay {
-    z-index: 3;
-  }
-
+    background-size: contain;
+  } */
 }
+
