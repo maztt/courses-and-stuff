@@ -56,7 +56,13 @@ Alura helps me on solidyfing the basics I have, and sometimes I might work on so
 </ul>
 
 # <h2><a href="https://github.com/maztt/courses-and-stuff/tree/main/hora-de-codar">• Hora De Codar</a></h2>
-WIP
+Anytime I need some Learn By Doing. The projects I get to develop along with Hora de Codar makes me learn stuff in a tangible way.
+<ul>
+<li> <b>BMI Calculator</b> - HTML/CSS/JS practicing with simple ideas for beginners.
+<li> <b>hDC Agency</b> - My first Bootstrap project page
+<li> <b>iMovi</b> - Bootstrap project page
+<li> <b>Moments</b> - My first Angular project
+</ul>
 
 # <h2><a href="https://github.com/maztt/courses-and-stuff/tree/main/hashtag-treinamentos">• Hashtag Treinamentos</a></h2>
 Their intensive methods of teaching helps me out on connecting basics to advanced stuff.
