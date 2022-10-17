@@ -48,6 +48,42 @@
     padding-left: 2em;
     padding-right: 2em;
   }
+
+  /* FIND JOBS PAGE */
+
+  #findjobs #search-form input[type=submit] {
+    margin-bottom: 0;
+  }
+
+  #findjobs #type-filter ul li {
+    width: 100%;
+    border-bottom: 1px solid #CCC;
+    box-sizing: border-box;
+  }
+
+  #findjobs #type-filter ul li:last-child {
+    border-bottom: none;
+    border-right: none;
+  }
+
+  /* JOB PAGE */
+  #job-header #job-info div {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  #jobpage .wrapper {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  #job-header #job-info .job-type {
+    margin-left: 5%;
+  }
+
+  #job-header #job-info div {
+    width: 30%;
+  }
 }
 
 
@@ -234,5 +270,62 @@
   .footer-box {
     display: block;
     width: 100%;
+  }
+
+  /* SEND JOBS PAGE */
+
+  #sendjobs #sendjobs-container {
+    padding: 2em 0;
+  }
+
+  #sendjobs h1 {
+    font-size: 2em;
+    width: 60%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .input-box {
+    width: 80%;
+  }
+
+  /* JOB PAGE */
+  #job-container {
+    width: 100%;
+  }
+
+  #companyinfo-container {
+    width: 100%;
+  }
+
+  #companyinfo-container {
+    width: 100%;
+    padding-top: 0em;
+    padding-left: 0em;
+  }
+
+  #job-header {
+    margin-top: 4em;
+  }
+
+  #job-header .locality {
+    display: block;
+  }
+
+  #job-header #job-info div {
+    height: 100%;
+  }
+
+  #job-header #job-info .job-type {
+    padding-top: 35px;
+  }
+
+  #companyinfo-container .job-type {
+    right: 0;
+  }
+
+  #apply-btn {
+    margin-bottom: 3em;
   }
 }
