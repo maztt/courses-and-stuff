@@ -1,54 +1,75 @@
 @media screen and (min-width: 768px) {
-  body {
-    background-image: url('../images/bg-pattern-desktop.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
+
+  div.container {
     width: 1440px;
-    }
+    height: 800px;
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-repeat: repeat-x;
+    background-size: cover;
+  }
 
-    div.container {
-      width: 1440px;
-      display: grid;
-      grid-template-columns: 60% 40%;
-      height: 100vh;
-    }
-
-    div.image {
-      background-image: url('../images/hero-desktop.jpg');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-  /* div.container {
+  section.main {
     width: 100%;
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-areas:
-    "text . image"
-    "text . image"
-  }
-  
-  div.logo, div.card-text {
-    grid-area: text;
-    padding-left: 160px;
+    padding-left: 140px;
+    padding-top: 120px;
   }
 
-  div.logo {
-    padding-top: 130px;
+  section.main > img:first-of-type {
+    margin-bottom: 100px;
+    height: 35px;
+  }
+
+  aside.image {
+    margin-top: -165px;
+    display: flex;
+    width: 610px;
+    height: 800px;
+    float: right;
+    background-image: url('../images/hero-desktop.jpg');
+    background-repeat: no-repeat;
   }
 
   div.card-text {
-    padding-top: 330px;
+    width: 50%;
   }
 
-  div.image {
-    grid-area: image;
-    background-image: url('../images/hero-desktop.jpg');
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: contain;
-  } */
+  h1.page-title, span, p.page-desc {
+    text-align: left;
+  }
+
+  h1.page-title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    letter-spacing: 1rem;
+  }
+
+  p.page-desc {
+    font-size: 1rem;
+    padding-right: 130px;
+    line-height: 1.7rem;
+  }
+
+  form {
+    width: 75%;
+  }
+  
+  button[type=submit] {
+    height: 60px;
+    width: 115px;
+  }
+
+  div.btn-overlay {
+    margin-top: -60px;
+  }
+
+  input[type=text] {
+    height: 60px;
+    padding: 25px 40px;
+    background-color: transparent;
+  }
+
+  input[type=text]::placeholder {
+    font-size: 1rem;
+  }
 }
 

@@ -26,19 +26,21 @@ div.container {
   margin: auto;
 }
 
-div.logo {
+.logo {
   height: 85px;
   display: flex;
   align-items: center;
   padding-left: 35px;
 }
 
-div.logo > img {
+section.main > img:first-of-type {
+  margin-top: 30px;
+  margin-bottom: 30px;
   height: 20px;
   display: flex;
 }
 
-div.image {
+aside.image {
   height: 250px;
   width: 100%;
   background-image: url('../images/hero-mobile.jpg');
