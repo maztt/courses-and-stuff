@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Portfolio Pocket</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/scrolls.css">    
+    <script src="./src/js/index.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <div class="personal-info">
+        <img src="./src/images/avatar.png" alt="Avatar" />
+        <h1 class="name">Júlio Mazotti</h1>
+        <h2 class="role">Desenvolvedor <span>${</span>Full Stack<span>}</span> Jr.</h2>
+      </div>
+      <div class="content">
+        <ul class="tabs">
+          <li class="tab selected" id="about">
+            <img src="./src/images/about.gif" alt="Page Screen Icon" />
+          </li>
+          <li class="tab" id="social-media">
+            <img src="./src/images/heart.gif" alt="Heart Spinning Icon" />
+          </li>
+        </ul>
+        <div class="info-tabs">
+          <div class="info selected" id="info-about">
+            <h3 class="header">Sobre</h3>
+            <div class="description">
+              <p>
+                Dizem por aí que a ideia de <span>Full Stack</span> pode ser um mito, mas para mim faz muito sentido discutir, estar presente e conceber toda a experiência que o usuário terá.
+              </p>
+              <p>
+                Iniciei uma migração de carreira em Maio de 2022 e conheci a programação pelo <span>Python</span>, hoje em dia busco concentrar meus estudos em todo o vasto universo explorável do <span>JavaScript</span>.
+              </p>
+            </div>
+          </div>
+          <div class="info" id="info-social-media">
+            <h3 class="header">Veja mais</h3>
+            <ul class="social-media">
+                <li>
+                    <a href="#" title="Que tal entrar em contato e solicitar algo personalizado?" class="curriculum">Currículo</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/juliomasson/" target="_blank" class="linkedin">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="https://github.com/maztt" target="_blank" class="github">GitHub</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
