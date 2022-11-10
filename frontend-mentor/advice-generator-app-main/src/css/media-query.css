@@ -1,0 +1,30 @@
+@media screen and (min-width: 768px) {
+  body {
+    width: 1440px;
+  }
+
+  div.card {
+    width: 545px;
+    height: 335px;
+    padding: 30px 45px;
+    border-radius: 1rem;
+  }
+
+  div.card > h1 {
+    font-size: .45rem;
+  }
+  
+  div.card > p {
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+  
+  div.card > img {
+    display: flex;
+    margin: auto;
+  }
+
+  div.separator {
+    background-image: url('../images/pattern-divider-desktop.svg');
+  }
+}

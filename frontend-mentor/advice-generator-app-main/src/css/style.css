@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap');
 
 * {
   margin: 0;
@@ -12,58 +12,75 @@
 
 :root {
   --lightcyan: hsl(193, 38%, 86%);
-  --neongreen: hsl(150, 100%, 66%);
+  --neongreen: #52ffa8;
   --grayishblue: hsl(217, 19%, 38%);
   --darkgrayishblue: hsl(217, 19%, 24%);
   --darkblue: hsl(218, 23%, 16%);
 }
 
-html {
-  width: 375px;
-}
-
 body {
+  width: 375px;
   background-color: var(--darkblue);
-}
-
-div.container {
-  display: flex;
   margin: auto;
 }
 
+
 div.card {
+  margin: auto;
+  margin-top: 265px;
+  width: 345px;
+  height: 315px;
   background-color: var(--darkgrayishblue);
-  padding: 40px 30px;
+  padding: 20px 20px;
   border-radius: .30rem;
   justify-content: center;
 }
 
-div.card > h1 {
+div.card h1, span {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 12px;
+  font-size: .4rem;
+  font-weight: 500;
   color: var(--neongreen);
   margin-bottom: 20px;
 }
 
-div.card > blockquote {
+div.card p#advice {
   color: var(--lightcyan);
   text-align: center;
+  font-size: .85rem;
+  line-height: 34px;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
-div.card > img {
+div.card img {
   display: flex;
   margin: auto;
 }
 
 button {
   display: flex;
-  position: absolute;
   padding: 20px;
   background-color: var(--neongreen);
+  border: none;
   border-radius: 50%;
-  margin: 5px auto; 
+  margin: -35px auto; 
+  opacity: .7;
+}
+
+div.separator  {
+  height: 16px;
+  background-image: url('../images/pattern-divider-mobile.svg');
+}
+
+button:hover {
+  -webkit-box-shadow: 0px 0px 25px 3px rgba(82,255,168,1);
+  -moz-box-shadow: 0px 0px 25px 3px rgba(82,255,168,1);
+  box-shadow: 0px 0px 25px 3px rgba(82,255,168,1);
+  opacity: 1;
+  transition: .2s;
+  cursor: pointer;
 }
 
