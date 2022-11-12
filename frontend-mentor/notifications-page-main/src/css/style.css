@@ -1,8 +1,152 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+
+  --lightgrayblue__1: hsl(210, 60%, 98%);
+  --lightgrayblue__2: hsl(211, 68%, 94%);
+  --lightgrayblue__3: hsl(205, 33%, 90%);
+  --grayblue: hsl(219, 14%, 63%);
+  --darkgrayblue: hsl(219, 12%, 42%);
+  --darkblue: hsl(224, 21%, 14%);
+}
+
+body {
+  width: 375px;
+  background-color: var(--white);
+  margin: auto;
+}
+
+div.container {
+  padding: 20px 15px;
+}
+
+div.header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-bottom: 20px;
+}
+
+div.header h2.notifications-title {
+  font-size: 1.3125rem;
+  font-weight: 800;
+}
+
+div.header button.notifications-quantity {
+  margin-left: -60px;
+  align-self: center;
+  width: 30px;
+  height: 25px;
+  border: none;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: var(--blue);
+}
+
+div.header p.notifications-action {
+  color: var(--darkgrayblue);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+div.content-box {
+  display: flex;
+  border-radius: 5px;
+  padding: 15px 15px;
+}
+
+div.content-box div.content-photo {
+  display: inline-block;
+}
+
+div.content-box div.content-photo > img {
+  width: 40px;
+}
+
+div.content-box div.content-posted-photo {
+  padding-left: 15px;
+}
+
+div.content-box div.content-posted-photo > img {
+  width: 40px;
+}
+
+div.content-box div.content-text {
+  padding-left: 15px;
+  font-size: 0.875rem;
+}
+
+div.content-box span.user {
+  color: var(--darkblue);
+  font-weight: 800;
+  padding-right: 5px;
+}
+
+div.content-box div.content-text> p {
+  color: var(--darkgrayblue);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+div.content-box span.post {
+  padding-left: 5px;
+  font-weight: 800;
+  color: var(--darkgrayblue);
+}
+
+div.content-box span.groups {
+  padding-left: 5px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+div.content-box span.dot {
+  padding-left: 5px;
+  color: var(--red);
+  font-size: 1.3125rem;
+}
+
+div.content-box span.date {
+  color: var(--darkgrayblue);
+  opacity: .8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+div.content-box div.private-message {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid var(--lightgrayblue__3);
+  color: var(--darkgrayblue);
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+div.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.messages.unread > div.content-box {
+  background-color: var(--lightgrayblue__1);
+}
+
+div.messages.unread div.content-text {
+  line-height: 16px;
 }
 

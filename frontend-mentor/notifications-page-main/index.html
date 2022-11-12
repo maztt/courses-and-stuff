@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">  
   <title>Frontend Mentor | Notifications page</title>
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/media-query.css">
@@ -12,43 +12,84 @@
 <body>
 
   <div class="container">
-    <div>
-      <div>Notifications</div> <div>3</div>
-      <div>Mark all as read</div>
+    <div class="header">
+      <h2 class="notifications-title">Notifications</h2> <button class="notifications-quantity">3</button>
+      <p class="notifications-action">Mark all as read</p>
     </div>
-    <div>
-      Mark Webber reacted to your recent post My first tournament today!
-      1m ago
-    </div>
-    <div>
-      Angela Gray followed you
-      5m ago
-    </div>
-    <div>
-      Jacob Thompson has joined your group Chess Club
-      1 day ago
-    </div>
-    <div>
-      Rizky Hasanuddin sent you a private message
-      5 days ago
-      <div>
-        Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
-        I'm already having lots of fun and improving my game.
+    <div class="messages unread">
+      <div class="content-box">
+        <div class="content-photo">
+          <img src="src/assets/images/avatar-mark-webber.webp" alt="User Photo">
+        </div>
+        <div class="content-text">
+          <p><span class="user">Mark Webber</span> reacted to your recent post <span class="post">My first tournament today!</span><span class="dot">•</span></p>
+          <span class="date">1m ago</span>
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="content-photo">
+          <img src="src/assets/images/avatar-angela-gray.webp" alt="User Photo">
+        </div>
+        <div class="content-text">
+          <p><span class="user">Angela Gray</span> followed you<span class="dot">•</span></p>
+          <span class="date">5m ago</span>
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="content-photo">
+          <img src="src/assets/images/avatar-jacob-thompson.webp" alt="User Photo">
+        </div>
+        <div class="content-text">
+          <p><span class="user">Jacob Thompson</span> has joined your group <span class="groups">Chess Club</span><span class="dot">•</span></p>
+          <span class="date">1 day ago</span>
+        </div>
       </div>
     </div>
-    <div>
-      Kimberly Smith commented on your picture
-      1 week ago
+    <div class="messages read">
+      <div class="content-box">
+        <div class="content-photo">
+          <img src="src/assets/images/avatar-rizky-hasanuddin.webp" alt="User Photo">
+        </div>
+        <div class="content-text">
+          <p><span class="user">Rizky Hasanuddin</span> sent you a private message</p>
+          <span class="date">5 days ago</span>
+          <div class="private-message">
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+            I'm already having lots of fun and improving my game.
+          </div>
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="content-photo">
+          <img src="src/assets/images/avatar-kimberly-smith.webp" alt="User Photo">
+        </div>
+        <div class="content-text">
+          <p><span class="user">Kimberly Smith</span> commented on your picture</p>
+          <span class="date">1 week ago</span>
+        </div>
+        <div class="content-posted-photo">
+          <img src="src/assets/images/image-chess.webp" alt="Post Photo">
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="content-photo">
+          <img src="src/assets/images/avatar-nathan-peterson.webp" alt="User Photo">
+        </div>
+        <div class="content-text">
+          <p><span class="user">Nathan Peterson</span> reacted to your recent post <span class="post">5 end-game strategies to increase your win rate</span></p>
+          <span class="date">2 weeks ago</span>
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="content-photo">
+          <img src="src/assets/images/avatar-anna-kim.webp" alt="User Photo">
+        </div>
+        <div class="content-text">
+          <p><span class="user">Anna Kim</span> left the group <span class="groups">Chess Club</span></p>
+          <span class="date">2 weeks ago</span>
+        </div>
+      </div>
+        </div>
     </div>
-    <div>
-      Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-      2 weeks ago
-    </div>
-    <div>
-      Anna Kim left the group Chess Club
-      2 weeks ago
-    </div>
-  </div>
-
 </body>
 </html>
