@@ -1,0 +1,53 @@
+@media screen and (min-width: 768px) {
+  body {
+    width: 1440px;
+    background-color: rgb(248, 248, 252);
+  }
+
+  div.container {
+    margin: auto;
+    margin-top: 60px;
+    width: 655px;
+    height: auto;
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 35px 30px 0px 30px;
+  }
+
+  div.header {
+    padding-bottom: 30px; 
+  }
+  
+  div.header button.notifications-quantity {
+    font-weight: 800;
+    font-size: 0.875rem;
+  }
+  
+  div.header p.notifications-action {
+    font-size: 0.875rem;
+  }
+
+  div.header-left {
+    display: flex;
+    gap: 10px;
+  }
+
+  div.content-box div.private-message {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  div.messages {
+    gap: 5px;
+  }
+
+  div.content-box div.content-posted-photo {
+    padding-left: 0px;
+  }
+
+  div.content-box div.content-posted-photo > img {
+    width: 40px;
+    margin-left: 170px;
+  }
+
+}
