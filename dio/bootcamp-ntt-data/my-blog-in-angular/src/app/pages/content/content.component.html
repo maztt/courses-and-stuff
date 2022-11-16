@@ -1,0 +1,20 @@
+<div class="container__content">
+
+  <div class="content__return">
+    <a [routerLink]="['']">(<<<) Return to Main Page</a>
+  </div>
+
+  <div class="content__cover">
+    <img 
+    src="{{ articleImage }}" 
+    alt="Article Image">
+  </div>
+  <div class="content__title">
+    <h1>{{ articleTitle }}</h1>
+  </div>
+  <div class="content__description">
+    <p>
+      {{ articleText }}
+    </p>
+  </div>
+</div>
