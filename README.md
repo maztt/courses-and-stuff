@@ -63,6 +63,7 @@ Anytime I need some Learn By Doing. The projects I get to develop along with Hor
 <li> <b>iMovi</b> - Bootstrap project page
 <li> <b>Moments</b> - My first Angular project
 <li> <b>Jobs Finder</b> - HTML/CSS/JS project for practicing
+  <li> <del>Box Shadow Generator</del> - <em>(migrated to Shadow Hero)</em>
 </ul>
 
 # <h2><a href="https://github.com/maztt/courses-and-stuff/tree/main/hashtag-treinamentos">• Hashtag Treinamentos</a></h2>
