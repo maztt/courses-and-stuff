@@ -27,75 +27,164 @@
 
 html {
   width: 375px;
+  display: flex;
+  margin: auto;
 }
 
 body {
   background-color: var(--verydarkblue);
+  width: 100%;
 }
 
 div.container {
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 0 25px;
+  padding: 80px 25px;
+  gap: 25px;
 }
 
-div.main-card {
-  background-color: var(--blue);
+div.container__main-card {
+  background-color: var(--darkblue);
   border-radius: 15px;
 }
 
-div.card-header {
+div.main-card__header {
+  background-color: var(--blue);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 30px;
+  border-radius: 15px;
 }
 
-div.card-header img {
+div.header-image img {
   width: 70px;
   border: 3px solid white;
   border-radius: 50%;
 }
 
-div.card-header div.header-info {
+div.main-card__header div.header-info {
   display: flex;
   flex-direction: column;
   font-weight: 300;
+  gap: 5px;
 }
 
-div.card-header div.header-info span {
+div.main-card__header div.header-info span {
   font-size: 1rem;
-  color: var(--desaturatedblue)
-}
-
-div.card-header div.header-info span.stats-user {
-  font-size: 1.3rem;
   color: white;
+  opacity: .7;
 }
 
-div.card-term {
-  background-color: var(--darkblue);
-  padding: 30px;
+div.main-card__header div.header-info span.header-user {
+  font-size: 1.3rem;
+  opacity: 1;
+}
+
+div.main-card__period {
+  padding: 25px;
   font-size: 1.2rem;
   display: flex;
   justify-content: space-around;
   font-weight: 300;
 }
 
-div.card-term span.stats-type {
+div.main-card__period span.period-time {
   color: var(--desaturatedblue)
 }
 
-div.card-term span.stats-type:nth-of-type(2) {
+div.main-card__period span.period-time:nth-of-type(2) {
   color: white;
 }
 
-div.card-work {
-  background-color: var(--lightred-work);
-  height: 40px;
+div.card-type {
+  padding-top: 40px;
+  border-radius: 15px;
+  background-repeat: no-repeat; 
+  background-position-x: 95%;
+  background-position-y: -12%;
 }
 
-div.card-work img {
-  float: right;
+.work { 
+  background-color: var(--lightred-work);
+  background-image: url('../images/icon-work.svg');
+}
+
+.play {  
+  background-color: var(--softblue-play);
+  background-image: url('../images/icon-play.svg') }
+
+.study { 
+  background-color: var(--lightred-study);
+  background-image: url('../images/icon-study.svg');
+ }
+
+.exercise { 
+  background-color: var(--limegreen-exercise);
+  background-image: url('../images/icon-exercise.svg');
+}
+
+.social { 
+  background-color: var(--violet-social);
+  background-image: url('../images/icon-social.svg');
+ }
+
+.self { 
+  background-color: var( --softorange-selfcare); 
+  background-image: url('../images/icon-self-care.svg');
+}
+
+div.card-info {
+  background-color: var(--darkblue);
+  color: white;
+  border-radius: 16px;
+  padding: 30px 25px;
+}
+
+div.card-header, div.card-stats {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+}
+
+div.card-header span.card-more, div.card-stats span.previous {
+  opacity: .8;
+}
+
+div.card-header h2.card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+div.card-header span.card-more {
+  font-size: 1.5rem;
+}
+
+div.card-header {
+  margin-bottom: 10px;
+}
+
+div.card-stats span.current {
+  font-size: 1.875rem;
+}
+
+.display {
+  display: none !important;
+}
+
+div.card-header span.card-more:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+span.period-time:hover {
+  cursor: pointer;
+}
+
+div.card-info:hover {
+  background-color: hsl(236, 48%, 30%);
+  cursor: pointer;
 }

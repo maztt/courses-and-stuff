@@ -11,79 +11,148 @@
 </head>
 <body>
   <div class="container">
-    <div class="main-card">
-      <div class="card-header">
-        <div class="header-image"><img src="src/images/image-jeremy.png" alt="User Avatar"></div>
+    <div class="container__main-card">
+      <div class="main-card__header">
+        <div class="header-image">
+          <img src="src/images/image-jeremy.png" alt="User Avatar">
+        </div>
         <div class="header-info">
           <span>Report for</span>
-          <span class="stats-user">Jeremy Robson</span>
+          <span class="header-user">Jeremy Robson</span>
         </div>
       </div>
-      <div class="card-term">
-        <span class="stats-type">Daily</span>
-        <span class="stats-type">Weekly</span>
-        <span class="stats-type">Monthly</span>
+      <div class="main-card__period">
+        <span class="period-time">Daily</span>
+        <span class="period-time">Weekly</span>
+        <span class="period-time">Monthly</span>
       </div>
     </div>
-    <div class="card-stats">
-      <div class="card-work"><img src="src/images/icon-work.svg" alt="Icon Work"></div>
-      <div class="card-info">
-        <h2 class="card-title">Work</h2>
-        5hrs <!-- daily -->
-        Previous - 7hrs <!-- daily -->
-        32hrs <!-- weekly -->
-        Previous - 36hrs <!-- weekly -->
-        103hrs <!-- monthly -->
-        Previous - 128hrs <!-- monthly -->
-      </div>
-    </div>
-    <div class="card-stats">
-      <h2 class="card-title">Play</h2>
-      1hr <!-- daily -->
-      Previous - 2hrs <!-- daily -->
-      10hrs <!-- weekly -->
-      Previous - 8hrs <!-- weekly -->
-      23hrs <!-- monthly -->
-      Previous - 29hrs <!-- monthly -->
-    </div>
-    <div class="card-stats">
-      <h2 class="card-title">Study</h2>
-      0hrs <!-- daily -->
-      Previous - 1hr <!-- daily -->
-      4hrs <!-- weekly -->
-      Previous - 7hrs <!-- weekly -->
-      13hrs <!-- monthly -->
-      Previous - 19hrs <!-- monthly -->
-    </div>
-    <div class="card-stats">
-      <h2 class="card-title">Exercise</h2>
-      1hr <!-- daily -->
-      Previous - 1hr <!-- daily -->
-      4hrs <!-- weekly -->
-      Previous - 5hrs <!-- weekly -->
-      11hrs <!-- monthly -->
-      Previous - 18hrs <!-- monthly -->
-    </div>
-    <div class="card-stats">
-      <h2 class="card-title">Social</h2>
-      1hr <!-- daily -->
-      Previous - 3hrs <!-- daily -->
-      5hrs <!-- weekly -->
-      Previous - 10hrs <!-- weekly -->
-      21hrs <!-- monthly -->
-      Previous - 23hrs <!-- monthly -->
-    </div>
-    <div class="card-stats">
-      <h2 class="card-title">Self</h2> Care
-      0hrs <!-- daily -->
-      Previous - 1hr <!-- daily -->
-      2hrs <!-- weekly -->
-      Previous - 2hrs <!-- weekly -->
-      7hrs <!-- monthly -->
-      Previous - 11hrs <!-- monthly -->
-    </div>
-  </div>
 
+    <div class="card-type work">
+      <div class="card-info">
+          <div class="card-header">
+            <h2 class="card-title">Work</h2>
+            <span class="card-more">•••</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">5hrs</span>
+            <span class="previous">Last Week - 7hrs</span>
+          </div>
+          <div class="card-stats">
+            <span class="current">32hrs</span>
+            <span class="previous">Last Week - 36hrs</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">103hrs</span>
+            <span class="previous">Previous - 128hrs</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="card-type play">
+      <div class="card-info">
+          <div class="card-header">
+            <h2 class="card-title">Play</h2>
+            <span class="card-more">•••</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">1hr</span>
+            <span class="previous">Previous - 2hrs</span>
+          </div>
+          <div class="card-stats">
+            <span class="current">10hrs</span>
+            <span class="previous">Previous - 8hrs</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">23hrs</span>
+            <span class="previous">Previous - 29hrs</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="card-type study">
+      <div class="card-info">
+          <div class="card-header">
+            <h2 class="card-title">Study</h2>
+            <span class="card-more">•••</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">0hrs</span>
+            <span class="previous">Previous - 1hr</span>
+          </div>
+          <div class="card-stats">
+            <span class="current">4hrs</span>
+            <span class="previous">Previous - 7hrs</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">13hrs</span>
+            <span class="previous">Previous - 19hrs</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="card-type exercise">
+      <div class="card-info">
+          <div class="card-header">
+            <h2 class="card-title">Exercise</h2>
+            <span class="card-more">•••</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">1hr</span>
+            <span class="previous">Previous - 1hr</span>
+          </div>
+          <div class="card-stats">
+            <span class="current">4hrs</span>
+            <span class="previous">Previous - 5hrs</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">11hrs</span>
+            <span class="previous">Previous - 18hrs</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="card-type social">
+      <div class="card-info">
+          <div class="card-header">
+            <h2 class="card-title">Social</h2>
+            <span class="card-more">•••</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">1hr</span>
+            <span class="previous">Previous - 3hrs</span>
+          </div>
+          <div class="card-stats">
+            <span class="current">5hrs</span>
+            <span class="previous">Previous - 10hrs</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">21hrs</span>
+            <span class="previous">Previous - 23hrs</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="card-type self">
+      <div class="card-info">
+          <div class="card-header">
+            <h2 class="card-title">Self Care</h2>
+            <span class="card-more">•••</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">0hrs</span>
+            <span class="previous">Previous - 1hr</span>
+          </div>
+          <div class="card-stats">
+            <span class="current">2hrs</span>
+            <span class="previous">Previous - 2hrs</span>
+          </div>
+          <div class="card-stats display">
+            <span class="current">7hrs</span>
+            <span class="previous">Previous - 11hrs</span>
+          </div>
+      </div>
+    </div>
 
 </body>
 </html>
