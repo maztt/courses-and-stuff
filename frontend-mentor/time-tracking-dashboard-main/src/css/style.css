@@ -49,10 +49,16 @@ div.container__main-card {
   border-radius: 15px;
 }
 
+div.container__sub-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
 div.main-card__header {
   background-color: var(--blue);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   padding: 30px;
   border-radius: 15px;
@@ -78,7 +84,7 @@ div.main-card__header div.header-info span {
 }
 
 div.main-card__header div.header-info span.header-user {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   opacity: 1;
 }
 
@@ -86,12 +92,16 @@ div.main-card__period {
   padding: 25px;
   font-size: 1.2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-weight: 300;
 }
 
 div.main-card__period span.period-time {
   color: var(--desaturatedblue)
+}
+
+div.main-card__period span.period-time:hover {
+  color: var(--paleblue);
 }
 
 div.main-card__period span.period-time:nth-of-type(2) {
@@ -151,7 +161,7 @@ div.card-header, div.card-stats {
 }
 
 div.card-header span.card-more, div.card-stats span.previous {
-  opacity: .8;
+  color: var(--paleblue);
 }
 
 div.card-header h2.card-title {
@@ -176,7 +186,7 @@ div.card-stats span.current {
 }
 
 div.card-header span.card-more:hover {
-  opacity: 1;
+  color: white;
   cursor: pointer;
 }
 

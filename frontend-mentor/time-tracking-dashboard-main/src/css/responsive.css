@@ -1,0 +1,66 @@
+@media screen and (min-width: 768px) {
+  html {
+    width: 1440px;
+  }
+
+  div.container {
+    flex-direction: row;
+  }
+    
+  div.container__main-card {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    height: 520px;
+  }
+
+  div.container__sub-cards {
+    max-width: 850px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  div.main-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  div.header-image img {
+    width: 80px;
+  }
+
+  div.main-card__period {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  div.card-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 16px;
+  }
+
+  div.card-info {
+    height: 200px;
+    width: 260px;
+  }
+
+  div.main-card__header div.header-info span.header-user {
+    font-size: 2.5rem;
+    opacity: 1;
+  }
+
+  div.card-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  div.card-stats span.current {
+    font-size: 3rem;
+  }
+}
