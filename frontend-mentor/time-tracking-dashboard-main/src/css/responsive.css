@@ -1,10 +1,16 @@
 @media screen and (min-width: 768px) {
+
   html {
     width: 1440px;
   }
 
   div.container {
+    position: relative;
+    top: 50%;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
     
   div.container__main-card {
@@ -18,20 +24,22 @@
     max-width: 850px;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 30px;
   }
 
   div.main-card__header {
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
+    padding-bottom: 80px;
   }
 
   div.header-image img {
-    width: 80px;
+    width: 85px;
   }
 
   div.main-card__period {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -41,12 +49,17 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-radius: 16px;
+    border-radius: 20px;
   }
 
   div.card-info {
     height: 200px;
     width: 260px;
+    padding: 30px;
+  }
+
+  div.card-header h2.card-title {
+    margin-bottom: 10px;
   }
 
   div.main-card__header div.header-info span.header-user {
@@ -57,10 +70,15 @@
   div.card-stats {
     flex-direction: column;
     align-items: flex-start;
-    gap: 25px;
+    gap: 5px;
   }
 
   div.card-stats span.current {
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+
+  div.card-header span.card-more {
+    font-size: 1.3rem;
+    letter-spacing: -1px;
   }
 }
