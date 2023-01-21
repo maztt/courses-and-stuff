@@ -68,12 +68,13 @@ Anytime I need some Learn By Doing. The projects I get to develop along with Hor
 <li> <b>iMovi</b> - Bootstrap project page.
 <li> <b>Moments</b> - My first ever Angular project.
 <li> <b>Jobs Finder</b> - Website page using jQuery.
-<li> <b>To Do List</b> - Pure HTML/CSS/JS project building my first To Do List.
+<li> <b>To Do List</b> - Vanilla HTML/CSS/JS project building my first To Do List.
 <li> <del>Box Shadow Generator</del> - <em>(migrated to <a href="https://github.com/maztt/shadow-hero">Shadow Hero</a>)</em>
 <li> <b>Weather-App</b> - 
-<li> <b>Password Generator</b> - Pure HTML/CSS/JS project for practicing.
+<li> <b>Password Generator</b> - Vanilla HTML/CSS/JS project for practicing.
 <li> <b>SignUp (OOP Validator)</b> - 
-<li> <b>Basic Windows Calculator</b> - Pure HTML/CSS/JS project building my Calculator.
+<li> <b>Basic Windows Calculator</b> - Vanilla HTML/CSS/JS project building my Calculator.
+<li> <del>Accounts</del> - <em>(migrated to <a href="https://github.com/maztt/terminimalist-bank">Terminimalist Bank</a>)</em>
 </ul>
 
 # <h2><a href="https://github.com/maztt/courses-and-stuff/tree/main/hashtag-treinamentos">• Hashtag Treinamentos</a></h2>
