@@ -75,6 +75,7 @@ Anytime I need some Learn By Doing. The projects I get to develop along with Hor
 <li> <b>SignUp (OOP Validator)</b> - 
 <li> <b>Basic Windows Calculator</b> - Vanilla HTML/CSS/JS project building my Calculator.
 <li> <del>Accounts</del> - <em>(migrated to <a href="https://github.com/maztt/terminimalist-bank">Terminimalist Bank</a>)</em>
+<li> <b>NodeJS Course</b> - A complete NodeJS course containing database and front sessions
 </ul>
 
 # <h2><a href="https://github.com/maztt/courses-and-stuff/tree/main/hashtag-treinamentos">• Hashtag Treinamentos</a></h2>
