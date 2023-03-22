@@ -1,0 +1,9 @@
+<h1>Teste</h1>
+<p>teste tb, pro {{user.name}}, q tem {{user.surname}}</p>
+{{#if auth}}
+  <p>
+    Você está autenticado, <a href="/dashboard">clique aqui</a>.
+  </p>
+{{else}}
+  <p>Você não foi autenticado.</p>
+{{/if}}

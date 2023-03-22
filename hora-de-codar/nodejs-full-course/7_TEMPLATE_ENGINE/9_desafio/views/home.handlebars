@@ -1,0 +1,10 @@
+<h1>Confira os produtos:</h1>
+
+{{#each items}}
+  <div class="box">
+    {{this.produto}}
+    {{this.preco}}
+    {{this.disponibilidade}}
+    <a href="/product/{{this.id}}">Detalhes</a>
+  </div>
+{{/each}}
