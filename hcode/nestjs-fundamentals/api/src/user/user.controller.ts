@@ -2,51 +2,39 @@ import { Controller, Get, Post, Body, Param, Put, Patch, Delete, ParseIntPipe } 
 import { CreateUserDTO } from './dto/create-user.dto'
 import { UpdatePutUserDTO } from './dto/update-put-user.dto'
 import { UpdatePatchUserDTO } from './dto/update-patch-user.dto'
+import { UserService } from './user.service'
 
 @Controller('users')
 export class UserController {
+  constructor(private readonly userService: UserService) {}
 
   @Post()
-  async create (@Body() { name, email, password }: CreateUserDTO) {
-    return { name, email, password }
+  async create (@Body() data: CreateUserDTO) {
+    return this.userService.create(data)
   }
 
   @Get()
   async read () {
-    return { users: [] }
+    return this.userService.read()
   }
 
   @Get(':id')
   async readOne (@Param('id', ParseIntPipe) id: number) {
-    return { user: {}, id }
+    return this.userService.readOne(id)
   }
 
   @Put(':id')
-  async updateAllInfo (@Param('id', ParseIntPipe) id: number, @Body() { name, email, password }: UpdatePutUserDTO) {
-    return { 
-      method: 'The method used here was PUT',
-      name,
-      email,
-      password,
-      id
-     }
+  async updateAllInfo (@Param('id', ParseIntPipe) id: number, @Body() data: UpdatePutUserDTO) {
+    return this.userService.updateAllInfo(id, data)
   }
 
   @Patch(':id')
-  async updateSomeInfo (@Param('id', ParseIntPipe) id: number, @Body() { name, email, password }: UpdatePatchUserDTO) {
-    return {
-      method: 'The method used here was PATCH',
-      name, 
-      email, 
-      password,
-      id
-    }
+  async updateSomeInfo (@Param('id', ParseIntPipe) id: number, @Body() data: UpdatePatchUserDTO) {
+    return this.userService.updateSomeInfo(id, data)
   }
 
   @Delete(':id')
   async delete (@Param('id', ParseIntPipe) id: number) {
-    return {
-      id
-    }
+    return this.userService.delete(id)
   }
 }
