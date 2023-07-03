@@ -6,6 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
 import { ConfigModule } from '@nestjs/config';
+import { MailerService } from './utils/mailer/mailer.service';
 
 @Module({
   imports: [
@@ -22,7 +23,8 @@ import { ConfigModule } from '@nestjs/config';
   providers: [AppService, {
     provide: APP_GUARD,
     useClass: ThrottlerGuard
-  }],
+  },
+  MailerService],
   exports: [AppService]
 })
 export class AppModule {}
