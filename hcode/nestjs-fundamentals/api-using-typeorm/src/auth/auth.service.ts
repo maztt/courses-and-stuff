@@ -1,12 +1,12 @@
 import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common'
 import { JwtService } from '@nestjs/jwt';
-import { AuthRegisterDTO } from 'src/auth/dto/auth-register.dto';
-import { UserService } from 'src/user/user.service';
 import * as bcrypt from 'bcrypt'
-import { MailerService } from 'src/utils/mailer/mailer.service';
-import { UserEntity } from 'src/user/entity/user.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
+import { UserEntity } from '../user/entity/user.entity';
+import { UserService } from '../user/user.service';
+import { MailerService } from '../utils/mailer/mailer.service';
+import { AuthRegisterDTO } from './dto/auth-register.dto';
 
 @Injectable()
 export class AuthService {
@@ -59,10 +59,8 @@ export class AuthService {
   }
 
   async login(email: string, password: string) {
-    const user = await this.usersRepository.findOne({
-      where: {
-        email
-      }
+    const user = await this.usersRepository.findOneBy({
+      email
     })
 
     if (!user) {
@@ -77,10 +75,8 @@ export class AuthService {
   }
 
   async forgotPassword(email: string) {
-    const user = await this.usersRepository.findOne({
-      where: {
-        email
-      }
+    const user = await this.usersRepository.findOneBy({
+      email
     })
 
     if (!user) {
@@ -147,6 +143,7 @@ export class AuthService {
   }
 
   async register(data: AuthRegisterDTO) {
+    delete data.role
     const user = await this.userService.create(data)
     return this.createToken(user)
   }

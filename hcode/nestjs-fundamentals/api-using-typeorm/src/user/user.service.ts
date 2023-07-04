@@ -15,11 +15,11 @@ export class UserService {
   ) { }
 
   async create(data: CreateUserDTO) {
-      if (!(await this.usersRepository.exist({
+      if (await this.usersRepository.exist({
         where: {
           email: data.email
         }
-      }))) {
+      })) {
         throw new BadRequestException('The email is already in use.')
       }
 
@@ -74,11 +74,9 @@ export class UserService {
   }
 
   async delete(id: number) {
-    if (await this.readOne(id)) {
-      return this.usersRepository.delete(id)
-    } else {
-      throw new NotFoundException(`User with ${id} not found!`)
-    }
+    await this.exists(id)
+    await this.usersRepository.delete(id)
+    return true
   }
 
   async exists(id: number) {

@@ -1,22 +1,20 @@
-import { BadRequestException, Body, Controller, FileTypeValidator, MaxFileSizeValidator, ParseFilePipe, Post, UploadedFile, UploadedFiles, UseGuards, UseInterceptors } from "@nestjs/common";
-import { AuthForgotPasswordDTO } from "src/auth/dto/auth-forgot-password.dto";
-import { AuthLoginDTO } from "src/auth/dto/auth-login.dto";
-import { AuthRegisterDTO } from "src/auth/dto/auth-register.dto";
-import { AuthResetPasswordDTO } from "src/auth/dto/auth-reset-password.dto";
-import { UserService } from "src/user/user.service";
+import { BadRequestException, Body, Controller, FileTypeValidator, MaxFileSizeValidator, ParseFilePipe, Post, Req, UploadedFile, UploadedFiles, UseGuards, UseInterceptors } from "@nestjs/common";
 import { AuthService } from "./auth.service";
-import { AuthGuard } from "src/guards/auth.guard";
-import { User } from 'src/decorators/user.decorator'
 import { FileFieldsInterceptor, FileInterceptor, FilesInterceptor } from "@nestjs/platform-express";
 import { join } from "path";
-import { FileService } from "src/file/file.service";
+import { User } from "../decorators/user.decorator";
+import { FileService } from "../file/file.service";
+import { AuthGuard } from "../guards/auth.guard";
+import { AuthForgotPasswordDTO } from "./dto/auth-forgot-password.dto";
+import { AuthLoginDTO } from "./dto/auth-login.dto";
+import { AuthRegisterDTO } from "./dto/auth-register.dto";
+import { AuthResetPasswordDTO } from "./dto/auth-reset-password.dto";
 
 
 @Controller('auth')
 export class AuthController {
 
   constructor(
-    private readonly userService: UserService,
     private readonly authService: AuthService,
     private readonly fileService: FileService
   ) { }
@@ -43,9 +41,10 @@ export class AuthController {
 
   @UseGuards(AuthGuard)
   @Post('tester')
-  async tester(@User() user) {
+  async tester(@User() user, @Req() {tokenPayload}) {
     return {
-      user
+      user,
+      tokenPayload
     }
   }
 
@@ -57,12 +56,12 @@ export class AuthController {
       new FileTypeValidator({ fileType: 'image/png' }),
       new MaxFileSizeValidator({ maxSize: 1024 * 1000 })
     ]
-  })) file: Express.Multer.File) {
+  })) photo: Express.Multer.File) {
 
-    const path = join(__dirname, '..', '..', 'storage', 'photos', `photo-${user.id}.png`)
+    const filename = `photo-${user.id}.png`
 
     try {
-      await this.fileService.upload(file, path)
+      await this.fileService.upload(photo, filename)
     } catch (error) {
       throw new BadRequestException(error)
     }
