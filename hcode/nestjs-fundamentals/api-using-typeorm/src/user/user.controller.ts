@@ -48,6 +48,8 @@ export class UserController {
   @Roles(Role.Admin)
   @Delete(':id')
   async delete(@ParamId() id: number) {
-    return this.userService.delete(id)
+    return {
+      success: await this.userService.delete(id)
+    }
   }
 }
