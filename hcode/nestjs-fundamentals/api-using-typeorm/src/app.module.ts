@@ -12,11 +12,13 @@ import { UserEntity } from './user/entity/user.entity';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      envFilePath: process.env.ENV === 'test' ? '.env.test' : '.env',
+    }),
     ThrottlerModule.forRoot({
       ttl: 60,
       limit: 10,
-      ignoreUserAgents: [/googlebot/gi]
+      ignoreUserAgents: [/googlebot/gi],
     }),
     forwardRef(() => UserModule),
     forwardRef(() => AuthModule),
@@ -28,15 +30,18 @@ import { UserEntity } from './user/entity/user.entity';
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
       entities: [UserEntity],
-      synchronize: process.env.ENV === "development"
-    })
+      synchronize: process.env.ENV === 'development',
+    }),
   ],
   controllers: [AppController],
-  providers: [AppService, {
-    provide: APP_GUARD,
-    useClass: ThrottlerGuard
-  },
-  MailerService],
-  exports: [AppService]
+  providers: [
+    AppService,
+    {
+      provide: APP_GUARD,
+      useClass: ThrottlerGuard,
+    },
+    MailerService,
+  ],
+  exports: [AppService],
 })
 export class AppModule {}

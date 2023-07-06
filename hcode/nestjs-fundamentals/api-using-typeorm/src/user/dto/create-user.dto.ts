@@ -1,9 +1,7 @@
 import { IsEmail, IsEnum, IsOptional, IsString } from 'class-validator';
 import { Role } from '../../enums/role.enum';
 
-
 export class CreateUserDTO {
-
   @IsString()
   name: string;
 
@@ -11,9 +9,9 @@ export class CreateUserDTO {
   email: string;
 
   @IsString()
-  password: string
+  password: string;
 
   @IsOptional()
   @IsEnum(Role)
-  role?: number
+  role?: number;
 }

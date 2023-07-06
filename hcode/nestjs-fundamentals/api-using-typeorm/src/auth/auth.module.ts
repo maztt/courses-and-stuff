@@ -1,4 +1,4 @@
-import { Module, forwardRef } from '@nestjs/common'
+import { Module, forwardRef } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
@@ -11,16 +11,15 @@ import { MailerModule } from '../utils/mailer/mailer.module';
 @Module({
   imports: [
     JwtModule.register({
-      secret: String(process.env.JWT_SECRET)
+      secret: String(process.env.JWT_SECRET),
     }),
     forwardRef(() => UserModule),
     FileModule,
     MailerModule,
-    TypeOrmModule.forFeature([UserEntity])
+    TypeOrmModule.forFeature([UserEntity]),
   ],
   controllers: [AuthController],
   providers: [AuthService],
-  exports: [AuthService]
-
+  exports: [AuthService],
 })
-export class AuthModule { }
+export class AuthModule {}

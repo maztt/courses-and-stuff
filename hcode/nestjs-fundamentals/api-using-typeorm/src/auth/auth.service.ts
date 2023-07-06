@@ -1,6 +1,10 @@
-import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common'
+import {
+  BadRequestException,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import * as bcrypt from 'bcrypt'
+import * as bcrypt from 'bcrypt';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from '../user/entity/user.entity';
@@ -10,92 +14,97 @@ import { AuthRegisterDTO } from './dto/auth-register.dto';
 
 @Injectable()
 export class AuthService {
-
-  private issuer = 'login'
-  private audience = 'users'
+  private issuer = 'login';
+  private audience = 'users';
 
   constructor(
     private readonly jwtService: JwtService,
     private readonly userService: UserService,
     private readonly mailerService: MailerService,
     @InjectRepository(UserEntity)
-    private readonly usersRepository: Repository<UserEntity>
-  ) { }
+    private readonly usersRepository: Repository<UserEntity>,
+  ) {}
 
   createToken(user: UserEntity) {
     return {
-      accessToken: this.jwtService.sign({
-        id: user.id,
-        email: user.email,
-        password: user.password
-      }, {
-        expiresIn: "7 days",
-        subject: String(user.id),
-        issuer: this.issuer,
-        audience: this.audience
-      })
-    }
+      accessToken: this.jwtService.sign(
+        {
+          id: user.id,
+          email: user.email,
+          password: user.password,
+        },
+        {
+          expiresIn: '7 days',
+          subject: String(user.id),
+          issuer: this.issuer,
+          audience: this.audience,
+        },
+      ),
+    };
   }
 
   checkToken(token: string) {
     try {
       const data = this.jwtService.verify(token, {
         issuer: this.issuer,
-        audience: this.audience
-      })
-      return data
+        audience: this.audience,
+      });
+      return data;
     } catch (error) {
-      throw new BadRequestException(error)
+      throw new BadRequestException(error);
     }
   }
 
   isValidToken(token: string) {
     try {
-      this.checkToken(token)
-      return true
+      this.checkToken(token);
+      return true;
     } catch (error) {
-      return false
+      return false;
     }
   }
 
   async login(email: string, password: string) {
     const user = await this.usersRepository.findOneBy({
-      email
-    })
+      email,
+    });
 
     if (!user) {
-      throw new UnauthorizedException('User credentials are invalid.')
+      throw new UnauthorizedException('User credentials are invalid.');
     }
 
-    if (!await bcrypt.compare(password, user.password)) {
-      throw new UnauthorizedException('User credentials are invalid.')
+    if (!(await bcrypt.compare(password, user.password))) {
+      throw new UnauthorizedException('User credentials are invalid.');
     }
 
-    return this.createToken(user)
+    return this.createToken(user);
   }
 
   async forgotPassword(email: string) {
     const user = await this.usersRepository.findOneBy({
-      email
-    })
+      email,
+    });
 
     if (!user) {
-      throw new UnauthorizedException('Email is invalid.')
+      throw new UnauthorizedException('Email is invalid.');
     }
 
-    const token = this.jwtService.sign({
-      id: user.id
-    }, {
-      expiresIn: '10 minutes',
-      subject: String(user.id),
-      issuer: 'forget',
-      audience: 'users'
-    })
+    const token = this.jwtService.sign(
+      {
+        id: user.id,
+      },
+      {
+        expiresIn: '10 minutes',
+        subject: String(user.id),
+        issuer: 'forget',
+        audience: 'users',
+      },
+    );
 
     await this.mailerService.sendEmail({
       from: '"CRUD Nest.js 👻" <crudnestjs@mail.com>', // sender address
-      to: "user7@email.com, user7@email.com", // list of receivers
-      subject: "Did you forget your password?", // Subject line
+      to: 'user7@email.com, user7@email.com', // list of receivers
+      subject: 'Did you forget your password?', // Subject line
       text: `
       Hello, ${user.name}!
 
@@ -107,45 +116,41 @@ export class AuthService {
       Best regards,
       Support Team
       `, // plain text body
-      html: "<b>Hello world?</b>", // html body -> I can use Handlebars, Pug aswell.
-    })
+      html: '<b>Hello world?</b>', // html body -> I can use Handlebars, Pug aswell.
+    });
 
-    return true
+    return true;
   }
 
   async resetPassword(password: string, token: string) {
     try {
-
       const data: any = this.jwtService.verify(token, {
         issuer: 'forget',
-        audience: 'users'
-      })
+        audience: 'users',
+      });
 
       if (isNaN(Number(data.id))) {
-        throw new BadRequestException('Invalid token.')
+        throw new BadRequestException('Invalid token.');
       }
 
-      const salt = await bcrypt.genSalt()
-      password = await bcrypt.hash(password, salt)
+      const salt = await bcrypt.genSalt();
+      password = await bcrypt.hash(password, salt);
 
-      await this.usersRepository.update(
-        Number(data.id), {
-        password
-      })
+      await this.usersRepository.update(Number(data.id), {
+        password,
+      });
 
-      const user = await this.userService.readOne(Number(data.id))
+      const user = await this.userService.readOne(Number(data.id));
 
-      return this.createToken(user)
+      return this.createToken(user);
     } catch (error) {
-      throw new BadRequestException(error)
+      throw new BadRequestException(error);
     }
-
   }
 
   async register(data: AuthRegisterDTO) {
-    delete data.role
-    const user = await this.userService.create(data)
-    return this.createToken(user)
+    delete data.role;
+    const user = await this.userService.create(data);
+    return this.createToken(user);
   }
-
 }

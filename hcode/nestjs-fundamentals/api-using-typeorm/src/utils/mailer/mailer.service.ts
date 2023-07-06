@@ -1,9 +1,9 @@
-import { Injectable } from '@nestjs/common'
-import * as nodemailer from 'nodemailer'
+import { Injectable } from '@nestjs/common';
+import * as nodemailer from 'nodemailer';
 
 @Injectable()
 export class MailerService {
-  private transporter: nodemailer.Transporter
+  private transporter: nodemailer.Transporter;
 
   constructor() {
     this.transporter = nodemailer.createTransport({
@@ -12,11 +12,11 @@ export class MailerService {
       auth: {
         user: 'myah82@ethereal.email',
         pass: 'QqKQhRYPJxY58ScUdU',
-      }
-    })
+      },
+    });
   }
 
   async sendEmail(mailOptions: nodemailer.SendMailOptions) {
-    return this.transporter.sendMail(mailOptions)
+    return this.transporter.sendMail(mailOptions);
   }
 }
