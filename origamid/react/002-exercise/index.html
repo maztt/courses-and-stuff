@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercício</title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            const luana = {
+                cliente: 'Luana',
+                idade: 27,
+                compras: [
+                    { nome: 'Notebook', preco: 'R$ 2500' },
+                    { nome: 'Geladeira', preco: 'R$ 3000' },
+                    { nome: 'Smartphone', preco: 'R$ 1500' }
+                ],
+                ativa: true
+            }
+            const mario = {
+                cliente: 'Mario',
+                idade: 31,
+                compras: [
+                    { nome: 'Notebook', preco: 'R$ 2500' },
+                    { nome: 'Geladeira', preco: 'R$ 3000' },
+                    { nome: 'Smartphone', preco: 'R$ 1500' },
+                    { nome: 'Guitarra', preco: 'R$ 3500' }
+                ],
+                ativa: false
+            }
+
+            const App = () => {
+                const dados = mario
+                const gasto = dados.compras
+                    .map(item => +item.preco.replace('R$ ', ''))
+                    .reduce(
+                        (valorAnterior, valorSeguinte) =>
+                            valorAnterior + valorSeguinte
+                    )
+                console.log(gasto)
+
+                return (
+                    <div>
+                        <p>Nome: {dados.cliente}</p>
+                        <p>Idade: {dados.idade}</p>
+                        <p>
+                            Situação: {' '}
+                            <span style={{color: dados.ativa ? 'green': 'red'}}>
+                                {dados.ativa ? 'Ativa' : 'Inativa'}
+                            </span>
+                        </p>
+                        <p>Total gasto: R$ {gasto}</p>
+                        {gasto > 10000 && <p>'Você está gastando muito'</p>}
+                    </div>
+                )
+            }
+
+            const container = document.getElementById('root')
+            const root = ReactDOM.createRoot(container)
+            root.render(<App />)
+        </script>
+    </body>
+</html>
